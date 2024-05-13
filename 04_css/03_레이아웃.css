@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* 
+선택자 종류
+1.요소(태그,타입)
+2.그룹: ,
+3.클래스 선택자 .이름
+ */
+/* .div1,.div2,.div3,.div4 { 1200 똑같은것 묶는다. ,와 함께 */
+    
+div{width:1200px; 
+    margin:0 auto;}
+
+/* 콘텐츠를 가로 가운데 배치  */
+.div1{ background: beige;
+    height: 100px;
+}
+   
+.div2{
+    background: yellowgreen;
+    height: 300px;
+}
+.div3 {
+    background: blueviolet;
+    height: 200px
+}
+.div4 {
+    background: red;
+    height: 100px;
+}
