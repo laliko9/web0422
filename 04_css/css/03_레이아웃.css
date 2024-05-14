@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+/* 
+선택자 종류
+1.요소(태그,타입)
+2.그룹: ,
+3.클래스 선택자 .이름
+ */
+/* .div1,.div2,.div3,.div4 { 1200 똑같은것 묶는다. ,와 함께 */
+    
+    /* 레이아웃 유형1의 전체 크기 */
+.container1{width:1200px; 
+    margin:0 auto;}
+
+/* 콘텐츠를 가로 가운데 배치  */
+.div1{ background: beige;
+    height: 100px;
+}
+/* .div1~4 는 레이아웃 유형1의 각 박스 크기와 배경색 */
+   
+.div2{
+    background: yellowgreen;
+    height: 300px;
+}
+.div3 {
+    background: blueviolet;
+    height: 200px
+}
+.div4 {
+    background: red;
+    height: 100px;
+}
+
+
+/* 레이아웃 유형 2-가로 */
+/* 
+    레이아웃 (Layout)
+  1. floating layout
+  2. flexible layout   (가장 자주 사용)
+  3. grid layout
+  4. positioning
+  5. 블록레벨 요소 속성을 인라인 요소 속성으로바꾼다.
+  */
+/* 
+  5번 display(표시방식)
+  display: block; ->인라인 요소 속성을 블록레벨 요소 속성으로로 바꾼다.
+  display: inline;->블록레벨 요소 속성을 인라인 요소 속성으로바꾼다
+  display: inline-block; 인라인요소+블록레벨요소 두 속성을 모두 갖는다.
+  display: none;-> 황면에서 요소를 제거   (애니멘에 많이 사용)
+
+  ctrl+d
+  블록레벨요소
+  -display: block;
+  -세로 배치(위에서 아래, 줄바꿈)
+  -가로 100%(auto), 세로는 내용 크기
+  -가로/세로 크기가 지정된다.
+
+  인라인 요소
+  -display; inline;
+  -가로 배치( 왼쪽에서 오른쪽, 줄마꿈X)
+  -width/height 는 내용크기
+  -width/height 는 크기가 지정되지 않는다 
+
+  -disply; inline-block
+   width/height 는 크기가 지정된다.
+  */
+ 
+/* .div5~7 는 레이아웃 유형1의 각 박스 크기와 배경색 */
+.container2{
+    display:inline-block; 
+    width: 400px;
+    height:200px;
+/* 카멜(낙타) 표기법: 소문자,두번째 단어부터 단어의 첫글자는 대문자 */
+
+
+
+}
+
+.div5{
+    background:fuchsia;
+ 
+}
+.div6{
+    background:goldenrod;
+   
+}
+.div7{
+    background:purple;
+    
+}
+
+/* 레이아웃 유형 2: float  (과거)*/
+/* float: left ->왼쪽을 기준으로 가로배치  */
+/* float: right -> 오른쪽을 기준으로 가로배치 */
+.container3{
+   float:left;
+
+}
+/* 레이아웃 유형2 flexible */
+.container4{
+    display: flex;
+}
