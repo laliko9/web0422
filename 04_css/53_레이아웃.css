@@ -96,7 +96,82 @@
    float:left;
 
 }
+
 /* 레이아웃 유형2 flexible */
+/* display:flex는 부모 요소에만 지정할 수 있다. */
+/* df=display flex  */
 .container4{
     display: flex;
 }
+
+/* 레이아웃 유형3 */
+.header {
+    width: 200px;
+    height: 700px;
+    background:red;
+}
+.contents{
+    width: 1000px;
+    height: 700px;
+    background:blue:
+}
+
+.continer5{
+    display:flex;
+}
+
+.div11{
+     width: 1000px;
+     height: 300px;
+    
+}
+
+
+
+
+/* 
+선택자
+1.요소(태그,타입)
+2.class 클래스
+3.하위 (자손:자식+손자): 부모요소 자손요소 
+   예> .container4 .seciton
+4 자식: 부모요소>자식요소   -꺽은가로 쓴다  
+ */
+
+ .container4{
+    width: 1200px;
+    margin: 0 auto;
+ }
+ .section{
+    width: 1200px;
+    height: 85px;
+    background:lightgray;
+ }.header2{
+    width: 200px;
+    height: 850px;
+    background: olive;
+ }
+ .contents2 {
+    width: 1000px;
+    height: 850px;
+    background: palegreen;
+ }
+
+ .slide {
+    width: 1000px;
+    height: 400px;
+    background: maroon;
+ }
+
+ .banner {
+    width: 1000px;
+    height: 200px;
+    background: navy;
+ }
+
+ .notice {
+    width: 1000px;
+    height: 250px;
+    background: red;
+ }
+ 
