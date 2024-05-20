@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/* @ : '엣' 이라고 읽음 */
+/* ctrl+alt+좌우방향키 */
+/* 부모에 dispaly:flex를 지정하면 
+   부모는 플렉스 컨테이너가 되고, 자식만 플렉스 아이템이 된다.
+*/
+/* 플렉스  컨테이너:width:auto;-> sidth:100% */
+.wrap {
+    display:flex;
+    wedth: 1200px;
+    
+    
+}
+/* 플렉스 아이템 :width:auto;-> width:내용% */
+
+.header {
+    width: 200px;
+    background: #999;
+  
+    
+}
+
+.slide {
+    background: #ccc;
+    height: 400px;
+
+
+}
+
+.banner {
+    background: #ccc;
+    height: 200px;
+}
+.footer {
+    background: #111;
+    height: 250px;
+}

@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./../04_css/53_레이아웃4.css">
 </head>
 <body>
     <!-- 세로배치 -->
-    <!-- container 4의 가로 크기는 1200px이다 -->
-    <!--1 가로중앙배치(margin:0 auto;) 한 번만 기록
+    <!-- wrap의 가로 크기는 1200px이다 -->
+    <!--.wrap의 역할 
+        1 가로중앙배치(margin:0 auto;) 한 번만 기록
         2콘텐츠를 하나로 그루핑
-        3 부모 -->
-    <div class="container4">
+        3 부모의.가로 크기와 같은 자식 요소 wodtj는 생략할 수 있다-->
+    <div class="wrap">
 <!-- 블랙레벨 요소의 가로 크기는 부모 크기의 100%이다. -->
 <!--.section과.footer의 가로크기는 부모 크기의 100%이다 -->
-<div class="df section"></div>
-<!-- 가로배치 display: flex; -->
+<div class="section">
+<!-- 가로배치 부모요소 (.section)display: flex; -->
 <div class="header">헤더</div>
-<div class="contents">
-    <!-- 세로배치 -->
-    <div class="slide">슬라이드</div>
-    <div class="banner">배너</div>
-    <div class="notice">공지사항</div>
+    <div class="contents">
+        <!-- 세로배치 -->
+        <div class="slide">슬라이드</div>
+        <div class="banner">배너</div>
+        <div class="notice">공지사항</div>
+    </div>
+
+
+
+
+
+
 </div>
+
+
 </div>
 <div class="footer">푸터</div>  
 </body>

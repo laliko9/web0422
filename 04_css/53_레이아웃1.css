@@ -1,0 +1,29 @@
+@charest "utf-8";
+/* @:dpt */
+
+/* shipt+alt+f  정렬  */
+/* shif+alt+아랫방향키 */
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #eee;
+    height: 100px;
+}
+
+.s1 {
+    background: #ccc;
+    height: 300px;
+}
+
+.s2 {
+    background: #aaa;
+    height: 200px;
+}
+
+.footer {
+    background: #111;
+    height: 100px;
+}
