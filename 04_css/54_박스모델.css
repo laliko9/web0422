@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/* 
+박스모델
+width:auto; -> 100% 내용 크기
+height:auto;-> 내용 크기 
+border:테두리 
+border-style:(선종류)실선;점선;대시선
+border-width:선굵기
+border-color:선색
+padding: 패딩( 글씨에서 박스의 떨어지는 값)
+margin: 여백
+
+box-sizing:content-box;(기본값)
+박스의 겉보기 크기:width+border+padding
+box-sizing:border-box;
+박스의 겉보기 크기: width->border 와padding이 
+width 절반 크기보다 작게 지정해야 한다.
+*/
+body{
+    margin: 0;
+    /*그룹핑 요소는 box-sizing:border-box;으로 사용하며 
+    border (테두리)와padding(패딩)크기가 width와height에 포함된다
+    */
+    /* 테두리를 지정하려면 반드시 style 을 지정해야한다. */
+    div{
+        width: 200px;
+        height: 200px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: red;
+        background: yellow;
+        /* 내부 콘텐츠 사이 간격  */
+        padding:20px;
+        /* 외부 콘텐츠 사이 간격  */
+        margin:40px; 
+        box-sizing: border-box;
+    }
+
+
+ /* 인라인 요소는 width, height,,box-sizing가 적용되지 않는다. */
+    span{
+        width: 200px;
+        height: 200px;
+        /* border:값1 값2 값3; (속기형)*/
+        border:1px solid red;
+        background: yellowgreen;
+        /* 가로/세로 가운데 배치  */
+        padding: 20px;
+         /* 여백은 좌우만 적용된다. */
+        margin:40
+    
+    }
+
