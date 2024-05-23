@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* 
+
+    text-align : 글자 맞춤;  (한줄만 가능하다)
+    line-height: 줄간격:;
+    padding: 패팅;  (위아래 간격을 똑같이 하기에 적합)
+    인라인 요소와 텍스트 가로 정렬
+    text-align
+    텍스트의 새로 가운데 정렬
+    1.height를 지정하지 않고, padding의 위래 같은 크기를 지정한다.
+    2.line-heinght속성값을height 속성 크기와 같은 크기로지정한다.(단, 한 줄 텍스트 일때만 가능하다)
+     */
+.box{
+    background:yellow;
+    height:100px;
+    margin: 12px;
+    
+}
+.box:nth-of-type(1) {
+    text-align: lift;
+    
+}
+.box:nth-of-type(2) {
+    text-align: center;
+    
+}
+.box:nth-of-type(3) {
+    text-align: right;
+    height:auto;
+    padding: 92px;
+
+}
+/* 부모.box 안에 있는 자식 div */
+.box div {
+    width:100px;
+    height: 50px;
+    background: red;
+
+}

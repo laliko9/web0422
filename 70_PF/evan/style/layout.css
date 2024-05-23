@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+
+/* 요소 선택자:태그명 
+그룹 선택자: ,
+전체 선택자:*
+*는 모든 요소를 가리킨다.
+ */
+/*body 를 제외한 바디안에 있는 자식, 손자만   */
+body *{outline: 1px solid lime}
+body{margin: 0;}
+nav {height: 200px;;}
+header {header:100px}
+section{we: 940px;margin:auto;}
+.home-card {display:flex ;}
+.home-icon{width: 100px; height: 100px;}
+.home-description{width: 790px; height: 140px;}
+.
