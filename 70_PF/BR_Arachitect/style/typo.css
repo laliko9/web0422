@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/*  웹 폰트 */
+/* 구글 폰트 */
+/* body       
+    한글:noto sans kr 
+    영문: noto 
+    */
+
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+
+/* 눈누 폰트 */
+/* 제목: 나눔 스퀘어 네오 
+ */
+ @font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: " NanumSquareNeo", sans-serif;
+    font-size: 15px;
+    }
+    h1,h2,h3{ font-family: 'NanumSquareNeo',sans-serif
+        h1,h3{
+            font-size: 15px;
+        }
+        h2{
+            font-size: 24px;
+        }
+
+    a{color:#111;
+    }
