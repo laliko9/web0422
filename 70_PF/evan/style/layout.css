@@ -8,10 +8,18 @@
  */
 /*body 를 제외한 바디안에 있는 자식, 손자만   */
 body *{outline: 1px solid lime;}
-body{margin: 0;}
-nav {height: 200px;}
-header {header:100px;
-background: url(../assets/bg-light.png)
+/* reset */
+body,ul,h1,h2,h3{margin: 0;}
+ul{padding:0;list-style-type: none;}
+a{text-decoration: none;}
+
+/* layout (배치)*/
+/* 박스모델 속성, display, position */
+
+nav {height: 100px;}
+nav li {display:inline-block;}
+header{
+    height:200px;line-height: 200px;
 }
 section{widhh: 940px;margin:auto;}
 .home-card {display:flex ;}
@@ -21,7 +29,12 @@ section{widhh: 940px;margin:auto;}
 
 
 
+/* header */
+header {
 
+background: url(../assets/bg-light.png);
+/* section */
+/* footer */
 /* 
  font-family:글꼴
     font-size:크기
