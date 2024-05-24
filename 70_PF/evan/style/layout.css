@@ -7,12 +7,72 @@
 *는 모든 요소를 가리킨다.
  */
 /*body 를 제외한 바디안에 있는 자식, 손자만   */
-body *{outline: 1px solid lime}
+body *{outline: 1px solid lime;}
 body{margin: 0;}
-nav {height: 200px;;}
-header {header:100px}
-section{we: 940px;margin:auto;}
+nav {height: 200px;}
+header {header:100px;
+background: url(../assets/bg-light.png)
+}
+section{widhh: 940px;margin:auto;}
 .home-card {display:flex ;}
 .home-icon{width: 100px; height: 100px;}
 .home-description{width: 790px; height: 140px;}
-.
+
+
+
+
+
+/* 
+ font-family:글꼴
+    font-size:크기
+    font-style: italic;이탤릭
+    font-weight: 굵기, 100,200,300~900(단위 없음)
+    line-height: 줄간격 150%,1.5~ 2  (단위 생략)
+    text-align: 맞춤
+    
+    style guide(스타일 가이드)
+    h1~h3,Nav a: Georgia
+    body, p, Section a : Arial
+
+    단위: rem,em, px, %
+
+    h1:50px, 700
+    h2:30px 700
+    h3:24px 700, lh 33.75px
+    h3  span: 22.5px, 400  
+    Nav a : 20pv, lh100px     (line height)
+    body: 15px,1.5 -> 150~200% 가독성이 좋다 
+    <div>
+  텍스트
+
+<span>인라인 요소 </span>
+
+</div>
+    p
+
+
+    영문제목: Georgia
+    영문본문: Arial
+    한글제목: Nato Sans KR
+    한글 본문: Nato Sana kr
+
+
+    /* 글자의 속성은 상속 받는다. */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+h1,h2,h3,nav,a{
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-style: italic;
+} 
+h1{font-size: 50px;color:#fff}
+h2{font-size: 30px;}
+h3{font-size: 22.5px;}
+nav a {font-size: 20px;color:#444;}
+/* bg-color */
+nav{background: #eee;}
+.home-icon{background:#eee;}
+.home-description{background:#ccc;}
