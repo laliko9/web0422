@@ -1,8 +1,18 @@
 @charset "utf-8";
 
-
-body,h1,h2,h3,ul{
+body, h1, h2, h3, ul
+{
     margin: 0;
 }
-ul {padding:0; letter-spacing: none;}
-a {text-decoration: none; none;}
+
+ul
+{
+    padding: 0;
+    list-style:none;
+}
+
+a
+{
+    text-decoration: none; 
+    /* 밑줄 제거 */
+}

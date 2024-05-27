@@ -1,51 +1,60 @@
 @charset "utf-8";
 
-/* 헤더 */
+/* header */
 header {
     display: flex;
     justify-content: space-between;
+    /* 하나는 왼쪽 하나는 끝쪽으로 감 */
     height: 56px;
     line-height: 56px;
     padding: 0 36px;
+
 }
 
-nav li {
-    display: inline-block;
-    padding-left: 0 18px;
+nav li{
+    display:inline-block; 
+    /* 가로배치하는 제일 간단한 방법 */
+    padding-left: 36px;
 }
-/* 세션의 공통 */
+
+/* Section의 공통부분 */
 section {
     width: 1500px;
     margin: 0 auto;
 }
 
 h2 {
-    border-bottom: 1px solid black;
-    padding-bottom: 24px 0;
+    border-bottom: 1px solid #ccc;
+    padding: 24px 0;
     margin-bottom: 48px;
     margin-top: 64px;
 }
 
-/* 섹션1 */
+/* section1 */
 .s1 {
-    height: 745
+    height: 745px;
+
 }
 
 .s1 h2 {
     border: none;
+    /* 밑줄제거 */
     margin: 0;
+    /* 위쪽 여백 제거 */
 }
 
-/* 섹션2 */
 .s2 ul {
-    display: felx;
+    display: flex;
+    /* 부모를 display: flex */
     flex-wrap: wrap;
 }
 
+/* section2 */
 .s2 li {
     width: 360px;
     height: 240px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .s2 li:nth-of-type(4n) {
@@ -54,11 +63,9 @@ h2 {
 
 .s2 h3 {
     display: inline-block;
-    padding: 8px 24px
+    padding: 8px 24px;
 }
 
-/* 섹션3 */
-
-/* 섹션4 */
-
-/* 푸터 */
+/* section3 */
+/* section4 */
+/* footer */
