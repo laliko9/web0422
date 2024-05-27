@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+.wrap4{
+    width: 1200px;
+    margin: 0 auto;
+}
+.container1{
+    display: flex;
+    background:yellow;
+}
+
+. header{
+    width: 200px;
+    background: fuchsia;
+}
+
+.right_wrap{
+    width: 1000px;
+}
+.notice{
+    height: 400px;
+    background:blue;
+
+}
+.slide{
+    height: 200px;
+    background: pink;
+}
+
+.container2{
+    display: flex;
+    background:yellow;
+}
+
+.banner1{
+    height: 250px;
+    background: beige;
+}
+.container3{
+    display: flex;
+    height: 100px;
+    background:yellow;
+}
+.footer1 {
+    width: 100px;
+    background: peru;
+}
+.footer2 {
+    width: 100px;
+    background:green
+} 
