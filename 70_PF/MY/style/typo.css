@@ -1,65 +1,40 @@
 @charset "utf-8";
 
-/* 
-style guide(스타일 가이드)
-영문 제목(h1~h3),nav안의 a : Georgia, Italic
-영문 본문(body, p), Section안의 a : Arial
-한글 제목 : Noto Sans KR
-한글 본문 : Noto Sans KR
+/* 본문한글은 구글폰트 중 Noto sans kr, 
+   본문영문은 Noto sans,본문 글꼴은 body,  */
 
-h1 : 50px, 700(글씨 굵기), lh60px
-h2 : 30px, 700, lh36px
-h3 : 22.5px, 700, lh33.75px
-h3 span: 22.5px, 400, lh33.75px
-nav a : 20px, lh100px(line-height)
-body : 15px, lh22.5px, (22.5 / 15하니까 1.5)본문은 글자 크기의 최소 150~200%사이는 해야함 
-ㄴ line-height은 단위생략 가능 그래서 22.5px말고 1.5로 쓰기 => 픽셀단위는 소수점으로 쓰지 않는다!
 
-*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-/* font */
-html {font-size:10px;}
-body
-{
-    font: 15px / 1.6em; Helvetica, Arial, sans-serif;
 
+
+/* 제목은 눈누폰트 나눔스퀘어 네오 */
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2');
 }
 
-h1,
- h2,
-h3,
-nav a 
-{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-}
-/* body를 밑에 쓰면 Cascading으로 인해  밑에꺼가 적용될 거 같지만 body가 부모이기 때문에 Cascading이 적용되지 않는다!*/
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 15px;
+  }
 
-/* 글자 속성은 자식이 부모한테 상속받는다 박스모델속성은 상속해주지 않는다! */
-h1 
-{
-    font-size:50px ;
-    color:#fff;
+h1, h2, h3 {
+    font-family: "NanumSquareNeo", sans-serif;
+  }
+
+h1, h3 {
+    font-size: 15px;
 }
 
-h2
-{
-    font-size: 3rem;
+h2 {
+    font-size: 24px;
 }
 
-h3{
-    font-size: 2.25rem;
-}
 
 a {
-    color:#444;
-    text-decoration: underline;
+    color:#111;
 }
-nav a
-{
-    font-size: 2rem;
-    color: #444;
-    text-decoration: none;
-}
+
 
 
