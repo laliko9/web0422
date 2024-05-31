@@ -1,5 +1,6 @@
 @charset "utf-8";
-
+@import url(resect.css);
+@import url(typo.css);
 /* 
     전체 선택자 : * (HTML에 쓴 모든 태그<head>부분 제외)
 
@@ -15,30 +16,15 @@ body * {outline: 1px solid lime;} 직접 변하는 모습을 보면서 작업하
 /* * {outline: 1px solid lime;} */
 /* html, body, nav, h1, h2, h3, main, section, div, header, footer */
 
-/* reset (초기화) */
-body, ul, h1, h2 
-{
-    margin: 0;
-}
+/* root 는 HTML 태그를 가리킨다. */
 
-ul
-{
-    padding:0;
-    list-style-type: none;
-}
-
-a{
-    text-decoration: none;
-    /* 링크 밑줄 제거 */
-
+html{
+    /* to the top 버튼을 부드럽게 스크롤  */
+    scroll-behavior:smooth;
 }
 
 
-body { 
-    margin: 0;
-}
-
-/* layout(배치)*/
+/* navigation */
 /* 박스모델 속성, display, position */
 nav {
     height:100;
@@ -74,12 +60,23 @@ nav section
     /* align-items: center;
     height: 200px; */
 }
-header {
+
+
+header
+{
+    /* 패럴랙스 스크롤링 기법 */
+    /* 핵심사항 ; background-attachment를 fixed로 하는 것! */
+    background: url(./../assets/bg-light.png) no-repeat 50% 50% /cover fixed;
     height: 200px;
     line-height: 200px;
-    /* height와 같은 크기의 line-height를 주면 kim Na Eun이 중앙으로 옴 */
 }
 
+    /* height와 같은 크기의 line-height를 주면 kim Na Eun이 중앙으로 옴 */
+
+/* main */
+main{
+     padding-bottom: 200px;
+}
 section {
     width: 940px;
     margin: 0 auto;
@@ -103,7 +100,7 @@ h2 {
 .home-description
 {
     width: 790px;
-    height: 140px;
+    
 }
 
 /* 
@@ -130,67 +127,12 @@ nav a : 20px, lh100px(line-height)
 body : 15px, lh22.5px, (22.5 / 15하니까 1.5)본문은 글자 크기의 최소 150~200%사이는 해야함 
 ㄴ line-height은 단위생략 가능 그래서 22.5px말고 1.5로 쓰기 => 픽셀단위는 소수점으로 쓰지 않는다!
 
-
-단위 : rem, em, px, %
-
-Color : 
-*/
-
-
-/* bg-color */
-
-
-.home-icon {
-    background: #ddd;
-}
-
-.home-description
-{
-    background:#ccc;
-}
-
-body
-{
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 15px;
-}
-
-h1, h2, h3, nav a 
-{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-}
-/* body를 밑에 쓰면 Cascading으로 인해  밑에꺼가 적용될 거 같지만 body가 부모이기 때문에 Cascading이 적용되지 않는다!*/
-
-/* 글자 속성은 자식이 부모한테 상속받는다 박스모델속성은 상속해주지 않는다! */
-h1 
-{
-    font-size:50px ;
-    color:#fff;
-}
-
-h2
-{
-    font-size: 30px;
-}
-
-h3{
-    font-size: 22.5px;
-}
-
-nav a
-{
-    font-size: 20px;
-    color: #444;
-}
-
 /* header */
-header
-{
-    /* 패럴랙스 스크롤링 기법 */
-    /* 핵심사항 ; background-attachment를 fixed로 하는 것! */
-    background: url(./../assets/bg-light.png) no-repeat 50% 50% /cover fixed;
-}
 
+
+/* main */
 /* section */
 /* footer */
+footer  { 
+    text-align: center;
+}
