@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(reset.css);
+        @import url(typo.css);
+
+
+         header{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            /* 블랙 레벨 요소의 가로 가운데 배치 하려면  width가 있는 상태에서 
+            margin:0 auto;처리한다 */
+                width: 1200px;
+                height: 100px;
+                margin: 0 auto;
+                padding: 30px;
+                /* 가운데배치 */
+                border: 1px solid;
+        }
+         .gnb {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            background: #000;
+        }
+    
+        /*  1depth */
+        .main{
+            display: flex;
+        }
+        .main>li {
+            width: 160px;
+            height: 30px;
+            /* 모든 메뉴 가로 가운데 배치 */
+            text-align: center;
+            /* 메인메뉴 텍스트 세로 가운데 배치: line-height 크기를 height 크기로 지정; */
+            line-height: 30px;
+        }
+        .main>li:hover {
+            background: #333;
+        }
+
+        /*  2depth */
+        .sub {
+            height: 0;
+            /* 평상시에는 안보이게 숨기려고
+            높이값을 0으로 했지만 넘쳐서 보이므로 
+            overflow:hidden처리 */
+            overflow:hidden;
+            visibility:hidden;
+            opacity: 0;
+            /* padding: 10px 0 20px; */
+
+            background: rgba(0,0,0,0.5);
+            /* 소수점 옆에 0은 생략 가능  */
+            transition:.3s;
+            /* 0.3초 동안 높이가 0에서 120으로 바뀌는 과정을 보여줌 */
+            line-height: 2;
+        }
+         
+          
+/* t선택자가 변경됨!! >li 제거*/
+/* 유형1: .main li :hover .sub {} */
+        .main>li:hover .sub{
+            height: 150px;
+            visibility:visible;
+            opacity: 1;
+           
+        }
+
+    .sub li a {
+        padding : 4px 16px;
+    }
+
+        .sub> li:hover a {
+            background: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="gnb">
+            <!-- 1depth -->
+            <ul class="main">
+                <li>
+                    <a href="#">메인메뉴1</a>
+                    <!-- 2depth -->
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴2</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴3</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴4</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--  header>nav.gnb>ul.main>li*4>a[href="#"]{메인메뉴 $}+ul.sub>li*4>a[href="#"] {서브메뉴$} -->
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(reset.css);
+        @import url(typo.css);
+
+
+         header{
+          
+                width: 200px;
+                height: 650px;
+                border: 1px solid;
+            }
+            .gnb {
+                margin: 16px;
+                
+                
+            }
+            
+            /*  1depth */
+            /* 1depth 에서 지정하면 2depth 영향이 간다  */
+        
+        
+        .main>li {
+            
+            line-height: 40px;
+            background: #333;
+            border-bottom: 1px solid #111;
+            text-align:center;
+        }
+        
+
+        /*  2depth */
+        .sub {
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+         
+            transition: .7s;
+            background:#777;
+            line-height: 30;
+        }
+
+        .main>li:hover .sub{
+            height: 150px;
+            visibility:visible;
+            opacity: 1;
+           
+        }
+
+
+    .sub>li:hover  {
+            background: #333;
+        }
+        .sub li:first-child{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="gnb">
+            <!-- 1depth -->
+            <ul class="main">
+                <li>
+                    <a href="#">메인메뉴1</a>
+                    <!-- 2depth -->
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴2</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴3</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴4</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--  header>nav.gnb>ul.main>li*4>a[href="#"]{메인메뉴 $}+ul.sub>li*4>a[href="#"] {서브메뉴$} -->
+
+</body>
+
+</html>
