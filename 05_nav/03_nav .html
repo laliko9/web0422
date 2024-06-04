@@ -25,8 +25,8 @@
         }
          .gnb {
             margin-top: 20px;
-            margin-bottom: 30px;
-            border: 1px solid;
+        
+            background: #111;
         }
     
         /*  1depth */
@@ -51,30 +51,68 @@
             /* 평상시에는 안보이게 숨기려고
             높이값을 0으로 했지만 넘쳐서 보이므로 
             overflow:hidden처리 */
-            overflow:hidden;
-            visibility:hidden;
+            overflow: hidden;
+            visibility: hidden;
             opacity: 0;
             /* padding: 10px 0 20px; */
 
             background: rgba(0,0,0,0.5);
             /* 소수점 옆에 0은 생략 가능  */
-            transition:.3s;
+            transition: .3s;
             /* 0.3초 동안 높이가 0에서 120으로 바뀌는 과정을 보여줌 */
             line-height: 2;
         }
          
           
-
-        .main>li:hover .sub{
-            height: 120px;
+/* t선택자가 변경됨!! >li 제거*/
+/* 유형1: .main li :hover .sub {} */
+        .main:hover .sub{
+            height: 150px;
             visibility:visible;
             opacity: 1;
            
         }
 
-        .sub> li:hover {
+    .sub li a {
+        padding: 4px 16px;
+    }
+
+    .sub>li:hover a {
             background: #111;
         }
+
+
+            /* 유형 3의 추가 코드  */
+
+.gnb {
+  position:relative;
+
+}
+.main {
+  border: 1px solid;
+ 
+  height: 30px;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  z-index:  -1;
+  top: 30px;
+  right: 0;
+  display:block;
+  width: 1200px;
+  height: 0px;
+  opacity:0;
+  transition: .3s;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.main:hover::before {
+  height: 150px;
+  opacity: 1;
+}
+            
+
     </style>
 </head>
 
