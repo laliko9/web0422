@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반려동물 용품 쇼핑몰</title>
+    <style>
+        /* 초기화 */
+        @import url(Style/reset.css);
+        /* 타이포 */
+        @import url(Style/typo.css);
+
+        
+        /* 헤더 영역 */
+        header {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 54px;
+            padding: 0 30px; /* 위아래는 0, 좌우는 30px여백 => 높이가 54로 확정되어있어서 위아래 padding주면 안됨*/
+            background:#fff;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            }
+
+        nav ul {
+            display: flex;
+            /* nav 안에 있는 ul이 가로배치 */
+        }
+
+        nav ul li {
+            margin-left:40px; /* li 사이끼리의 간격때문에 왼쪽에 마진 */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 헤더 영역-->
+     <header>
+        <!-- logo -->
+        <h1 class="logo"><a href="#"><b>PP</b>Paradise</a></h1>
+
+        <!-- navigation -->
+        <nav>
+            <ul>
+                <li><a href="#">상품</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+         </nav>
+     </header>
+        
+        
+</body>
+</html>

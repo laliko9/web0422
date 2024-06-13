@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>기타 요소</h1>
+    <h2>서식 요소</h2>
+
+    <!--굵게, 기울기 
+     <strong>:굵게: 가장 중요한 텍스트
+        <b>:굵게 (단순한 용도 )
+        <em>:강조할 텍스트 
+            <i>: 기술용어, 외국어 
+                <small>:작은 텍스트 
+                    <mark>: 중요한 텍스트, 하일라이트 텍스트  처리 
+    -->
+    <p>... 가장 중요한 규칙, 그가 아무리 울어도, 아무리 애원해도 결코 잊을 수 없는 규칙: <strong>자정 이후에는 먹이를 주지 마십시오.</strong></p>
+    
+    <!-- <em>, 강세 (accent, 악센트 , 강세  -->
+    <p>Just <em>do</em> it already!</p>
+    <p>과거에 <em>block-level</em>이라 불렸던 콘텐츠는 HTML 5부터<em>flow</em> 콘텐츠라고 말합니다.</p>
+    <!-- 주의를 끌기 위함, 굴게  -->
+    <p>학교에서 제공되는 가장 인기 있는 두 가지 과학 과정은 <b>화학</b>(화학과 물질의 구성에 대한 연구)과 <b>물리학</b>(물질과 에너지의 성질과 특성에 대한 연구)입니다.</p>
+
+        <!-- 기술 용어  -->
+    
+    <p><i>대역폭</i>이라는 용어는 주어진 시간 동안 데이터 연결을 통해 전달할 수 있는 정보의 양을 측정한 것입니다.</p>
+    <p>라틴어 문구 <i>Veni, vidi, vici</i>는 음악과 예술, 문학에 자주 등장합니다.</p>
+    <!-- 외국어  -->
+    
+    <p>"샐러맨더"에 대한 검색 결과:</p>
+    <hr>
+    <p>여러 종의 <mark>도롱뇽</mark>이 태평양 북서부의 온대 우림에 서식합니다.</p>
+    <p>대부분의 <mark>도롱뇽</mark>은<span style="background-color: yellow;">도룡뇽</span> 이며 곤충, 벌레 및 기타 작은 생물을 사냥합니다.</p>
+    
+    <p><small>Copyright 년도. 닉네임 All rights reserved.</small></p>
+    <p><small>(c) 년도. 개인회사명 Co. All rights reserved.</small></p>
+    <p><small>&copy; 년도. 주식회사명 INC. All rights reserved.</small></p>
+    <p><small>Copyright 년도. 유한회사명 Co., Ltd All rights reserved.</small></p>
+    <p><small>Copyright 년도. 법인회사명 Corp. All rights reserved.</small></p>
+    <p><small>ⓒ 2024 Starbucks Coffee Company. All Rights Reserved.</small></p>
+    
+    <!-- <del>: 삭제된 텍스트
+  -->
+    <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+    <p>
+      There is <del>nothing</del> <ins>no code</ins> either good or bad, but <del>thinking</del> <ins>running it</ins> makes
+      it so.
+      <!-- <blockquote>: 긴 인용문
+        <p> 한 줄 인용문 -->
+    </p>
+
+    <!-- <sub> 아래첨사  
+         <sup> 윗첨사
+            <font-size> -->
+    
+    <p>거의 모든 개발자가 선호하는 분자는 "카페인"이라고도 알려진 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>입니다.</p>
+    
+    <p>피타고라스의 정리는 종종 다음 방정식으로 표현됩니다.a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+    
+    <h2>인용문</h2>
+    <p>Here is a quote from WWF's website:</p>
+    <!-- 
+        <blockquate cite="url">긴인용문 /싸이트에서 가져와서 쓰임 
+            '블록레벨 요소 '
+            <q>: 한 줄 짧은 인용문
+                1.인라인 요소
+                2.작은 따옴표가 생김 
+                <cite>:작품제목 
+     -->
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+    For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+    </blockquote>
+    
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+      <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+      <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+    </blockquote>
+    
+    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+    <p>
+      When Dave asks HAL to open the pod bay door, HAL answers:
+      <q cite="https://www.imdb.com/title/tt0062622/quotes/?item=qt0396921&ref_=ext_shr_lnk">
+        I'm sorry, Dave. I'm afraid I can't do that.
+      </q>
+    </p>
+      <!-- <abbr>: 약어 (WHO,....), ENANSWKDJ (MR..., Dr,.....) </abbr> -->
+    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+    <p>
+      You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your <abbr>HTML</abbr> (HyperText Markup Language).
+      Using style sheets, you can keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content layer
+      separate. This is called "separation of concerns."
+    </p>
+    
+    <address>
+    Written by John Doe.<br> 
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+    </address>
+    <!-- <bdo dir="ltr">
+        ltr: left to right , 예>왼쪽에서 오른쪽
+        rtl:right to left , 예> 서예 쬑윈
+        <img> 이미지 파일 연결 
+        <video>: 비디오 파일 연결 
+    <audio> d-->
+    <p>Contact the author of this page:</p>
+    
+    <!-- <addrress>:1.연락처 (실제 주소, URL,전화 번호, E-mail 등 ) 정보 정의 
+                    2. 블록 레벨 요소  display;block;
+                    3. font-style: italic
+                      
+    -->
+    <address>
+      <a href="mailto:jim@example.com">jim@example.com</a><br />
+      <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+    </address>
+    
+    
+    <img src="https://www.w3schools.com/html/img_the_scream.jpg" width="220" height="277" alt="The Scream">
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+    
+    <figure>
+      <blockquote>
+        <p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
+      </blockquote>
+      <figcaption>
+        First sentence in <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a></cite> by George
+        Orwell (Part 1, Chapter 1).
+      </figcaption>
+    </figure>
+    
+    <bdo dir="rtl">This line will be written from right to left</bdo>
+    
+    <p>Looks like this in Hebrew: <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span></p>
+    <p>In the computer's memory, this is stored as <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo></p>
+    
+    <p>이 글은 왼쪽에서 오른쪽으로 작성합니다.</p>
+    <p><bdo dir="rtl">이 글은 오른쪽에서 왼쪽으로 작성합니다.</bdo></p>
+    
+    <h2>컴퓨터 코드 요소</h2>
+    <!-- <p>
+        <br> 줄바꿈
+    <pre>: 사전(미리)에 지정된 서식으로  . 여기에 쓰인 그대로 F12에 쓰인다
+           font-family: monospace 
+           wite-space:pre;
+           ma
+        <hr> 구분선  -->
+    <pre>
+      L          TE
+        A       A
+          C    V
+           R A
+           DOU
+           LOU
+          REUSE
+          QUE TU
+          PORTES
+        ET QUI T'
+        ORNE O CI
+         VILISÉ
+        OTE-  TU VEUX
+         LA    BIEN
+        SI      RESPI
+                RER       - Apollinaire
+    </pre>
+    
+    <!-- <code> 
+        1프로그래밍 언어로 작성한 코드 정의
+        
+        <kbd> : 키보드의 키 정의 
+                font-family: monospace
+    
+    -->
+
+    <pre>
+    <code>
+    x = 5;
+    y = 6;
+    z = x + y;
+    </code>
+    </pre>
+    
+    <p>
+      The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the
+      array.
+    </p>
+    <p>
+      함수 <code>selectAll()</code>는 입력 필드의 모든 텍스트를 선택하므로, 사용자가 복사 혹은 삭제를 손쉽게 할 수 있습니다.
+    </p>
+    
+    <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+    <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+    
+    <p>Message from my computer:</p>
+<!-- 
+    <samp> 
+        프로그래밍 결과 출력 정의 
+     font-family: monospace
+    </samp> -->
+    <p><samp>File not found.<br>Press F1 to continue</samp></p>
+    
+    <p>I was trying to boot my computer, but I got this hilarious message:</p>
+    <p>
+      <samp>Keyboard not found <br />Press F1 to continue</samp>
+    </p>
+    
+<!-- <var>:변수 
+    1. 변수 정의 
+    2.font-style: italic; -->
+    <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+    
+    <p>
+      The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where <var>l</var> represents the length,
+      <var>w</var> the width and <var>h</var> the height of the box.
+    </p>
+     
+</body>
+</html>

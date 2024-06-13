@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제해결시나리오</title>
+    <style>
+        @import url(reset.css);
+        @import url(typo.css);
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            height: 100px;
+            margin: 0 auto;
+            padding: 50px;
+            border: 1px solid red;
+        }
+
+        .gnb {
+            margin-top: 50px;
+            background: #be67a0;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .main>li {
+            width: 600px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .main>li:hover {
+            background: #06bae7;
+        }
+
+        .sub {
+            height: 0;
+
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.5);
+            transition: .3s;
+            line-height: 2;
+
+        }
+
+        .main>li:hover .sub {
+            height: 150px;
+            margin-block-start: 25px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .sub>li:hover {
+            background: #5c9924;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="gnb">
+            <ul class="main">
+                <li>
+                    <a href="" herf="#">축제소개</a>
+                    <ul class="sub">
+                        <li><a href="" herf="#">Festival소개</a></li>
+                        <li><a href="" herf="#">행사장안내</a></li>
+                        <li><a href="" herf="#">조직위원회</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" herf="#">예약안내</a>
+                    <ul class="sub">
+                        <li><a href="" herf="#">예약하기</a></li>
+                        <li><a href="" herf="#">예약확인/취소</a></li>
+                        <li><a href="" herf="#">단체예약문의</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" herf="#">아티스트</a>
+                    <ul class="sub">
+                        <li><a href="" herf="#">고릴라즈</a></li>
+                        <li><a href="" herf="#">메이저리그</a></li>
+                        <li><a href="" herf="#">아우스게인</a></li>
+                        <li><a href="" herf="#">타임로드</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" herf="#">커뮤니티</a>
+                    <ul class="sub">
+                        <li><a href="" herf="#">공지사항</a></li>
+                        <li><a href="" herf="#">사진겔러리</a></li>
+                        <li><a href="" herf="#">영상겔러리</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
