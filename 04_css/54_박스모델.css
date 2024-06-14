@@ -31,8 +31,7 @@ body{
         border-color: red;
         background: yellow;
         /* 내부 콘텐츠 사이 간격  */
-        padding:20px;
-        /* 외부 콘텐츠 사이 간격  */
+        padding:20px;/* 외부 콘텐츠 사이 간격  */
         margin:40px; 
         box-sizing: border-box;
     }

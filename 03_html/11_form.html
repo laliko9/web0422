@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <body>
+    <h1>폼</h1>
+ <p>폼은 검색 창, 로그인 또는 회원가입 페이지 제작시에 사용한다.input 태그의 22의 type에 따라 입력란, 확인란, 라디오 버튼, 전송 버튼 , 초기화 버튼, ....등이 있다.input 은 인라인 요소다 </p>
+
+ <form action="login.jsp">
+     <!-- 한 줄 텍스트 입력  -->
+      <!--입력란의 경우 value는 초기 값을 지정할때 쓰인다. -->
+      <!-- for와 id 가 같아야 한다  -->
+     <label for="user_id">로그인</laber>
+     <input id="user_id" type="text" placeholder="아이디를 입력해 주세요."><br>
+     <!-- 비밀번호 입력  -->
+     <label for="user_id">비밀번호</label>
+     
+     <input type="password"><br>
+     <!-- 화면에 표시되지 않은 텍스트 입력 ,테이터 베이스 입력에 관련이 있다. 계발자들이 씀  -->
+     <input type="hidden"><br>
+     <!-- 이메일 입력 -->
+     <input type="email"><br>
+     
+     <!-- 검색어 입력  -->
+     <input type="search"><br>
+     <!-- 전화번호 입력  -->
+     <input type="tel"><br>
+     <!-- 웹주소 입력  -->
+     <input type="url">
+     <hr>
+     <!-- 여러 개 중에서 여러 개 선택 ,네모-->
+     <!-- value는 서버로 전송될 값 -->
+      <labe1>
+          <input type="checkbox" name ="chkgroup"
+             value="">회칙1 읽음
+      </labe1>
+     <labe1>
+         <input type="checkbox" name ="chkgroup"
+              value="">회칙2 읽음
+     </labe1>
+         <labe1>
+             <input type="checkbox" name ="chkgroup"
+             value="">회칙3 읽음
+         </labe1>
+     
+     
+     
+     <!-- 여러 개중에 1개만 선택, 동그라미 선택  -->
+     <!-- name속성은 개발자가 DB 을 연동할 때 사용한다.
+         name 속성이 같아야 라디오 버튼이 그풉핑 된다  -->
+     <input type="radio" name="radiogroup" value="yes">동의함 
+     <input type="radio" name="radiogroup" value="no"> 동의 안함 
+     
+     
+     <hr>
+     
+     
+     
+     
+     <!-- 전송제출 -->
+     <input type="submit" value="로그인/회원가입">
+     <!-- 초기화 -->
+     <input type="reset" value="reset">
+     
+     <!-- 버튼 타입인 경우 value 는 버튼의 이름 지정  -->
+     <input type="button" value="기타버튼 ">
+     <!-- 이미지 버튼 (전송과 초기화 제외) -->
+     <input type="image" src="./../assets/abtn.svg" alt="기타버튼">
+     
+     
+     <button type="submit">로그인</button>
+     <button type="submit">reset</button>
+     <button type="submit">기타버튼</button>
+     
+     <!-- 대부분 submit, reset 은 input 태그 사용, 나머지는 대부분   bottom에 사용  -->
+     <!-- 파일 첨부  -->
+     <input type="file">
+     
+     <hr>
+     
+     
+     <!-- 스핀 버튼, 카운트  -->
+     <input type="number">
+     <!-- 범위  -->
+     <input type="range">
+     
+     <hr>
+     <!-- safari (x) -->
+     <input type="color">
+     <!-- 2024. -->
+     <input type="date">
+     <!-- safari(x), firefox (x) -->
+     <input type="datetime-local">
+     <input type="month">
+     
+     <hr>
+     
+     <!-- safari(x), firefox (x) -->
+     <input type="time">
+     
+     <input type="week">
+     <select name="" id="">
+        <option value="">국제전화코드</option>
+        <option value="">한국 (+82)</option>
+        <option value="">일본 (+81)</option>
+        <option value="">중국 (+86)</option>
+        <option value="">미국 (+1)</option>
+
+     </select>
+ </form>
+
+</body>
+</html>
