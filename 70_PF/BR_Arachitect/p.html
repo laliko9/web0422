@@ -8,21 +8,56 @@
     <style>
         @import url(style/reset.css);
         @import url(style/typo.css);
-    section{width: 1920px;
-    margin: 0 auto;
-    padding:96 0 ;
-    border:1px solid red;
-}
-    ul>li {
-        boredr: 1px solid blue;
+     
+       
+    section{
+        width: 1480px;
+        margin: 0 auto;
+        padding:96px 0;
+        border: 1px solid red;
     }
-      h2{font-size: 50px;}
-       ul{display: flex;
-    background: yellow;} 
-    li{height: 480px;
-    magin: 20px;}
-    div{background: pink;
-    height: 270px;}
+
+    h2 {
+        font-size:50px;
+        text-align:center;
+      
+    }
+
+
+    ul{
+        display: flex;
+        flex-wrap:wrap;
+        background:yellow;
+
+    }
+
+    li{
+        width: 280px;
+        margin-right: 20px;
+    }
+    li p {margin: 24px 0;}
+   ul div { display:block;
+        height: 270px;
+        background: blueviolet;
+    }
+
+    p{
+        font-style: 2.4rem;
+        margin: 24px;
+
+    }
+    span {
+        display: block;
+        border-bottom :1px solid blue;
+        text-align:center;
+        padding: 100px 0;
+       
+
+    }
+    span a {border:3px solid pink;
+           
+           
+    }
     </style>
 </head>
 
@@ -32,11 +67,12 @@
     <section>
         <h2>MARKET</h2>
         <img src="" alt="">
+        <div class="wrap"></div>
         <ul> 
-            
-            <li> 
+
+             <li> 
             <div><!-- 이미지 삽입예정 --></div>
-               <p>상품이름1 </p>
+               <p>상품1 </p>
                 <a href=""></a>
             </li>
                 
@@ -57,11 +93,17 @@
                            <p>상품이름4 </p>
                             <a href=""></a>
                         </li>
-                
-                        <li> 
+                </ul>
+        
+         
+            
+                    <ul>
+                      
+                    <li> 
                             <div><!-- 이미지 삽입예정 --></div>
                                <p>상품이름5 </p>
                                 <a href=""></a>
+                                <p class="#">선물하기</p>
                             </li>
                 
                             <li> 
@@ -80,9 +122,12 @@
                                         <div><!-- 이미지 삽입예정 --></div>
                                            <p>상품이름8 </p>
                                             <a href=""></a>
-                                        </li>
-                                            
-            </ul>
+                                        </li>  
+                    </ul>
+           
+                        
+                                          
+            
        <span><a href="">더보기</a></span>
     </section>
 </body>
