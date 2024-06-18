@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+
+
+
+ul {
+    margin: 0;
+    padding: 0;
+  padding-left:0;
+  list-style: none;
+}
+
+/* 슬라이드 내용 */
+
+        :html {
+            --w: 500px;
+            --h: 150px; 
+        }
+
+        .slide {
+          
+            width: 500px;
+            height: 150px;
+            margin: 20px;
+            overflow: hidden;
+            /* 3장의 이미지가 하나만 보이게함  */
+        }
+        .slide ul {
+            position: relative;
+            display: flex;
+            width: 400%;
+            height: 100%;
+            animation: slide 12s infinite;
+        }
+        .slide li {
+            flex: 0 0 25%;
+        }
+
+        /* animation */
+        
+           
+        
+        @keyframes slide {
+            0% {left: 0%;}
+            10% {left: -100%;}
+            33% {left: -100%;}
+            43% {left: -200%;}
+            66% {left: -200%;}
+            76% {left: -300%;}
+            99.99% {left: -300%;}
+            100% {left: 0%;}
+        }
+
+        /* typo */
+        .slide li {font-size: calc(var(--w) / 5); text-align: center; line-height: calc(var(--h) - 20px);}
+        /* bg-color */
+        .slide li:nth-child(1) {background: #d8d8d8;}
+        .slide li:nth-child(2) {background: #acacac;}
+        .slide li:nth-child(3) {background: #999999;}
+        .slide li:nth-child(4) {background: #d8d8d8;}
+
+
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="slide">
+        <ul>
+            <li><img src="s1.jpg" alt="슬라이드 이미지1"></li>
+            <li><img src="s2.jpg" alt="슬라이드 이미지2"></li>
+            <li><img src="s3.jpg" alt="슬라이드3"></li>
+            <li><img src="s1.jpg" alt="슬라이드1"></li>
+        </ul>
+    </div>
+</body>
+</html>
