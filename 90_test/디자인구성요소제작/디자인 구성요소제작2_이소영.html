@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(reset.css);
+        @import url(typo.css);
+
+            h1 {font-size: 20px;
+                font-style: italic;
+                font-weight: 200px;
+                padding-right: 300px;
+            }
+            /* 페딩으로 위치 왼쪽 배치 */
+
+            header{
+    
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+                
+                width: 1200px;
+                height: 200px;
+                margin: 0 auto;
+                padding: 30px;
+                border: 1px solid gray;
+                background: rgb(175, 219, 206);
+                
+        }
+            .gnb {
+            margin-bottom: 100px;
+            
+            border: 1px  solid rgb(1, 32, 26);
+        }
+    
+        /*  1depth */
+        .main{
+            display:flex;
+        }
+        .main>li {
+            position: relative;
+            width: 160px;
+            height: 30px;
+           
+            text-align: center;
+          
+            line-height: 30px;
+        }
+        .main>li:hover {
+            background: #085c3d;
+        }
+
+/*  2depth */
+.sub {
+            height: 0;
+            
+            overflow:hidden;
+            visibility:hidden;
+            opacity: 0;
+            
+
+            background: #085c3d;
+    
+            transition:.3s;
+    
+            line-height: 2;
+                    display: inline;
+                 /* sub  가로줄로 바꾸기위해 inline 사용 */
+            justify-content: flex-end;
+            align-items: flex-start;
+    
+
+        }
+        .main>li:hover .sub{
+            height: 100px;
+            visibility:visible;
+            opacity: 1;
+            
+        }   
+
+        .sub> li:hover {
+            background: #085c3d;
+        
+        }
+        .slide {
+            
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+/* 마지막 한장은 숨겨짐  */
+        }
+        .slide ul {
+            position: relative;
+            display: flex;
+            width: 400%;
+            height: 100%;
+            animation: slide 12s infinite;
+        }
+        .slide li {
+            flex: 0 0 25%;
+        }
+
+      /* animation */
+        
+        @keyframes slide {
+            0% {left: 0%;}
+            10% {left: -100%;}
+            33% {left: -100%;}
+            43% {left: -200%;}
+            66% {left: -200%;}
+            76% {left: -300%;}
+            99.99% {left: -300%;}
+            100% {left: 0%;}
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Vallery-Festival</h1>
+        <nav class="gnb">
+
+            <ul class="main">
+                
+                <li>
+                    <a href="#">축제소개</a>
+                    <!-- 2depth -->
+                    <ul class="sub">
+                        <li><a href="#">Festival 소개</a></li>
+                        <li><a href="#">행사장 안내</a></li>
+                        <li><a href="#">조직위원회</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">예약안내</a>
+                    <ul class="sub">
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인/취소</a></li>
+                        <li><a href="#">단체예약문의</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">아티스트</a>
+                    <ul class="sub">
+                        <li><a href="#">고릴라즈</a></li>
+                        <li><a href="#">메이저 레이저</a></li>
+                        <li><a href="#">아우스게인</a></li>
+                        <li><a href="#">타임로드</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">커뮤니티</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">사진겔러리</a></li>
+                        <li><a href="#">영상겔러리</a></li>
+                
+                    </ul>
+                </li>
+            </ul>
+    
+        </nav>
+        
+    </header>
+       
+    </div>
+
+    <div class="slide">
+        <ul>
+            <li><img src="../90_test/images/Festival 1 1.jpg" alt="페스티벌이미지1"></li>
+            <li><img src="../90_test/images/Festival 2 1.jpg" alt="페스티벌이미지2"></li>
+            <li><img src="../90_test/images/Festival 3 1.jpg" alt="페스티벌 이미지3"></li>
+            <li><img src="../90_test/images/Festival 1 1.jpg" alt="페스티벌 이미지4"></li>
+        </ul>
+    </div>   
+        
+
+</body>
+
+</html>
