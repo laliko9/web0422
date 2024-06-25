@@ -1,0 +1,25 @@
+/* 배너 영역 */
+#banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: aliceblue;
+}
+
+/* 배너 이미지 */
+/* 플렉스 아이템 요소는 display:block; 이다. */
+#banner span {
+    width: 120px;
+    height: 100px;
+    background: #ccc;
+}
+
+/* 배너 타이틀 및 설명글 */
+#banner>div {
+    width: 1000px;
+    padding-right: 200px;
+}
+#banner>div h2 {
+    margin-bottom: 16px;
+}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* @import는 상단에 기록해야한다. */
+@import url(reset.css);
+@import url(typo.css);
+@import url(header.css);
+@import url(link.css);
+@import url(banner.css);
+@import url(tabs.css);
+@import url(footer.css);
+
+#slide {
+    height: 350px;
+    background: rgba(240, 68, 103, 0.5);
+}
+
+#main_contents {
+    width: 1340px;
+    margin: -100px auto 0;
+    border: 1px solid;
+}
+
+
+
+
