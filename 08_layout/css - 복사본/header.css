@@ -5,16 +5,18 @@ header {
     position: relative;
 }
 
-.container {
+header.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* 블록레벨요소의 가로 가운데 배치: width, margin */
     width: 1340px;
     margin: 0 auto;
+    /* 블록레벨요소의 가로 가운데 배치: width, margin */
+
     height: 100px;
-    border: 1px solid;
-}
+    border: 1px solid;}
+
+
 
 /* 로고 */
 .logo {
@@ -53,7 +55,7 @@ header {
     content: "";
     position: absolute;
     /* absoulte  높이 지정해줘야함  */
-    z-index: -1;
+
     top: 100px;
     left: 0;
     width: 100%;
@@ -65,6 +67,7 @@ header {
 
 /* 2depth */
 .sub {
+    position: relative;
     height: 0;
     overflow: hidden;
     visibility: hidden;

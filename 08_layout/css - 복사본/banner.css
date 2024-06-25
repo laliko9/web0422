@@ -4,15 +4,17 @@
 /* 배너 영역 */
 #banner {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
-    width: 1340px;
+
     padding: 50px;
     background: aliceblue;
 }
 
 /* 배너 이미지 */
-#banner a div {
+/* 플랙스 아이템 요소는 display: block; */
+#banner  span {
     width: 120px;
     height: 100px;
     background: #ccc;
@@ -25,4 +27,4 @@
 }
 #banner>div h2 {
     margin-bottom: 16px;
-}
+} 

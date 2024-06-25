@@ -62,7 +62,7 @@
     <!-- 메인콘텐츠 -->
 
     
-    <div class="container">
+    <div id="main_contents">
 
    
         
@@ -70,25 +70,12 @@
         <div id="link">
             <ul>
                 <li>
-                    <a href="#"> 아이콘넣기 </a>
-                    <a href="">link1</a>
-                </li>
-                <li>
-                    <a href="#"> 아이콘넣기 </a>
-                    <a href="">link2</a>
-                </li>
-                <li>
-                    <a href="#"> 아이콘넣기 </a>
-                    <a href="">link3</a>
-                </li>
-                <li>
-                    <a href="#"> 아이콘넣기 </a>
-                    <a href="">link4</a>
-                </li>
-                <li>
-                    <a href="#"> 아이콘넣기 </a>
-                    <a href="">link5</a>
-                </li>
+                    <a href="#"> <span><!-- 이미지아이콘 --></span>link1</a> </li>
+                    <a href="#"> <span><!-- 이미지아이콘 --></span>link2</a> </li>
+                    <a href="#"> <span><!-- 이미지아이콘 --></span>link3</a> </li>
+                    <a href="#"> <span><!-- 이미지아이콘 --></span>link4</a> </li>
+                    <a href="#"> <span><!-- 이미지아이콘 --></span>link5</a> </li>
+             
             </ul>
         </div>
 
@@ -102,6 +89,34 @@
             <a href="#"><img src="arrow.svg" alt="배너 버튼"></a>
         </div>
         <!-- 공지사항 및 겔러리 -->
+
+        <div class="tabs">
+            <!-- 탭1 -->
+            <input type="radio" name="btn" id="btn1" checked>
+            <label for="btn1">공지사항</label>
+            <div class="tab1">
+                <ul>
+                    <li><a href="">Lorem ipsum dolor sit, amet consectetur adipisicing...</>0000.00.00</a></li>
+                    <li><a href="">Lorem ipsum dolor sit, amet consectetur adipisicing...</>0000.00.00</a></li>
+                    <li><a href="">Lorem ipsum dolor sit, amet consectetur adipisicing...</>0000.00.00</a></li>
+                    <li><a href="">Lorem ipsum dolor sit, amet consectetur adipisicing...</>0000.00.00</a></li>
+                   
+                </ul>
+            </div>
+    
+            <!-- 탭2 -->
+            <input type="radio" name="btn" id="btn2">
+            <label for="btn2">갤러리</label>
+            <div class="tab2">
+                <ul>
+                    <li><a href=""><span><!-- 이미지 삽입 --></span>  Lorem, </a></li>
+                    <li><a href=""><span><!-- 이미지 삽입 --></span>  Lorem, </a></li>
+                    <li><a href=""><span><!-- 이미지 삽입 --></span>  Lorem, </a></li>
+                    
+                   
+                          </ul>
+            </div>
+        </div>
 
         <!-- 푸터 -->
         <footer>
@@ -122,8 +137,9 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab accusantium itaque reiciendis fugit autem quod tempora doloremque quasi! Quam reiciendis commodi nobis aperiam optio itaque?</p>
             </div>
         </footer>
-    </div>
-    </div>
+
+    </div> 
+  
 
     </body>
 

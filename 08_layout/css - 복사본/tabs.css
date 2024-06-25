@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-
+#tab_wrap{
+    height: 300px;
+}
 
 
 
@@ -62,7 +64,7 @@
     border-bottom: 1px dotted #ccc;
 }
 
-.tab1 li span{
+.tab1 li a{
     display: inline-block;
     width: 422px;  
     
@@ -76,7 +78,8 @@
     margin-top: 5px;
 
 }
-.tab2 div {
+.tab2 span {
+    display: block;
     width: 150px;
     height: 100px;
     background:  #ccc;
