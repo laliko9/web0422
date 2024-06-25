@@ -29,10 +29,10 @@
 
 .banner {
     height: 200px;
-    background: #ccc;
+    background: #ccc;}
 
-.notice{height: 250px;background}
-}
+.notice{height: 250px;background:blue}
+
 .footer {
     height: 100px;
     background: #111;
