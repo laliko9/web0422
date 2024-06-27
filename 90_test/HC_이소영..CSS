@@ -1,0 +1,42 @@
+
+<style>
+wrap{
+    width: 1600px;
+    list-style: none;
+   
+    
+}
+
+.container {
+    display:flex; 
+    margin-top:100px;
+}
+.text {
+
+    
+    padding-left: 40px;
+   
+    width: 650px;
+    height: 420px;
+    background-color:#F2F2F2;
+    
+}
+
+h3 {font-size: 38px;
+    padding-top:50Px;}
+
+ p {font-size:20px;
+    line-height:15px;
+   }  
+    
+span  a {font-size: 19px;
+        color: #333333;
+        line-height:70px;}
+
+
+.right_wrap {
+    width: 650px;
+    height: 420px;
+    background: gray;
+}
+</style>
