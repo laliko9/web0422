@@ -17,7 +17,6 @@
         section {
 
 
-
             /* margin-left: 200px; */
             padding: 0 auto;
             border: 1px solid red;
@@ -30,10 +29,15 @@
             margin-bottom: 50px;
         }
 
-       h3 h4 {
+        .box{
+            background: blue;
+            height: 70px;
+        }
+
+       h3,h4 {
            position: relative;
-         
-           outline: 1px solid blue;
+            z-index: 100;
+           
 
             justify-content:left;}
                 
@@ -102,8 +106,10 @@
             <ul>
                 <li>
                     <div><!-- 이미지 삽입예정 --></div>
-                    <h3>상품이름2</h3>
-                    <h4>영어이름 </h4>
+                    <div class="box">
+                        <h3>상품이름2</h3>
+                        <h4>영어이름 </h4>
+                    </div>
 
                 </li>
                 <li>
