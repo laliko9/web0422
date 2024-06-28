@@ -14,22 +14,31 @@
         // 3 두 번째 글자부터 영문자, 숫자, $, _,-
 
         // 함수? 실행 코드를 저장하는 변수이다.
-
-        // 함수 선언
-        // 1.선언적 함수
+        // 함수는 어디에 사용하는가?
+        //  1.실행코드의 실행 시점을 정의한다.
+        //  2.코드의 재사용
+        // 함수  
+        // 1.선언적 함수-> 이름이 있는 함수 
         // function 함수명 (){실행코드};
 
-        function fin1(){window.alert("메세지");};
+        function fin1(){
+                alert("메세지");
+        };
 
 
         // 2. 익명 함수 
         //      const 변수 =function(){};
         // 변수 선언 키워드 : var, let,const
-        const fn2=function(){window.alert("메세지");};
+        const fn2=function(){
+            alert("메세지");
+        };
 
         //    3. 화살표 (=>) 함수
         //    const 변수명 = ()=>{};
-        const fn3= function(){window.alert("메세지");};
+        // 실행코드가 한 문장이면 {} 생략가능
+        const fn3= () => {
+            alert("메세지");
+        };
 
 
         // function 함수명(){실행할 코드}
@@ -48,12 +57,19 @@
         // const fn =function(){};  
 
     //    function 함수명() {alert("메세지");}
-           function a1aa(){window,alert("메세지");};
+           function a1aa(){alert("메세지");};
 
     //    함수 호출 
-    // 함수명();
+    // 함수명(); 또는  변수명( );
+    fn1();
+    fn2();
+    fn3();
+
+// 
 
     a1aa();
+//   alert 은 window의  내장이다 ? ㅇㅇㅇㅇㅇ
+
     </script>
 </body>
 </html>
