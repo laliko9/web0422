@@ -7,18 +7,22 @@
 */
 /* 플렉스  컨테이너:width:auto;-> sidth:100% */
 .wrap {
-    display:flex;
-    wedth: 1200px;
+
+    width: 1200px;
     
     
 }
 /* 플렉스 아이템 :width:auto;-> width:내용% */
 
 .header {
-    width: 200px;
+    display:flex;
     background: #999;
   
     
+}
+.content1 {
+    background: yellow;
+    height: 400px;
 }
 
 .slide {
@@ -29,10 +33,10 @@
 }
 
 .banner {
-    background: #ccc;
-    height: 200px;
+    background:burlywood;
+    height: 400px;
 }
 .footer {
     background: #111;
-    height: 250px;
+    height: 400px;
 }

@@ -1,42 +1,15 @@
 @charset "utf-8";
 
-/* @ : '엣' 이라고 읽음 */
-/* ctrl+alt+좌우방향키 */
+/* @ : '엣' 이라고 읽음 
+ ctrl+alt+좌우방향키 
 /* 부모에 dispaly:flex를 지정하면 
 부모는 플렉스 컨테이너가 되고, 자식만 플렉스 아이템이 된다.
 */
 /* 플렉스  컨테이너:width:auto;-> sidth:100% */
-.wap{width: 1200px;}
-.section {
-    display:flex;
+
        /* alt+방향키 세션의 위아래  */
-}
+
 /* 플렉스 아이템 :width:auto;-> width:내용% */
-
-.header {
-    width: 200px;
-    background: #999;
-
-    
-}
-
-.slide {
-    height: 400px;
-    background: #ccc;
-
-
-}
-
-.banner {
-    height: 200px;
-    background: #ccc;
-
-.notice{height: 250px;background}
-}
-.footer {
-    height: 100px;
-    background: #111;
-}
 
 
 
