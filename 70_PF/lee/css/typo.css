@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* 본문한글은 구글폰트 중 Noto sans kr, 
+   본문영문은 Noto sans,본문 글꼴은 body,  */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+/* 공통  */
+html { font-size: 10px;}
+
+body {
+    font-family: "Noto Sans KR", sans-serif; font-size: 1.5rem; color: #1b1b1b;}
+
+
+
+
+
+h3 {
+    font-size: 1.6rem; font-weight:600px;
+}
+h2 {
+    font-size: 4.8rem; font-weight:600px;
+}
+
+span {
+    font-style: 2rem; font-weight: 600px;
+}   
+
+
+a {
+    color:#111;
+}
+
+
+/* 세션2 */
+
+#s2>.inner>p {color: #777;}
+
+#s2 #tabs>ul a {color: #777;}
+
+
+#s2 h3.rank1 { font-size: 4rem; font-weight: 600px;
+}
