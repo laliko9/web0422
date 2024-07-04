@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자      <조상은 부모 포함이다>
+        1. id 선택자->#이름
+        ............................................................................
+        2.조상선택자 선택자 하위 선택자_> 조상은 부모 포함, 하위는 자식 포함  (한칸을 띄우기)
+        3 부모선택자 >자식선택자 
+
+        ..............................................................
+        4. nth-child(n),nth=of-type(n)->형제관계 선택자 
+        5 형선택자+제선택자-> 인접 형제선택자
+        6 형선택자 ~형제들다 선택자 
+        .....................................................
+        7가상클라스 -> (input:checked):hover, : checked  
+        8.가상 요소-> :: before, :: after*/
+
+        #subject1 {
+            display: none;
+        }
+
+        /* check 되지 않은 상태  */
+        #subject1+label::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+            background-repeat: no-repeat 0% 0%;
+            background-image: url(../assets/chk_b.svg);
+            /* before와  after 은 반드시 content 등 밑에 요소가 들어가야 한다  */
+        }
+
+        /* check  된 상태  */
+        #subject1:checked+label::before {
+            background-image: url(../assets/chk_a.svg);
+            /* before와  after 은 반드시 content 등 밑에 요소가 들어가야 한다  */
+        }
+
+        #subject1+label {
+            color: red
+                /* 마우스 커서: 손  */
+                cursor: pointer;
+        }
+
+        /* 확인란과 라디오 버튼은  margin: 3px 3xp 3px 4px; 
+        라디오 버튼은 margin: 3px 3px 0 5px*/
+        input:checked {
+            /* width: 23px;+
+                   height: 23px; */
+            transform: scale(2);
+            /* zoom: 2; */
+            margin-right: 30px;
+            accent-color: blue;
+        }
+
+        label:nth-of-type(3)~laber {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- h1+p,h1~p  p:nth-of-type(1) -->
+    <h1>확인란과 라디오 버튼</h1>
+    <p>input 태그의 type, name, value는 필수 속성 있고, checked는 선택 속성이다.</p>
+    <!-- 확인란 (checkbox) 여러개 중 여러 개 선택  -->
+    <!-- 한 페이지에 it의 값은 서로 달라야 한다. -->
+
+    <!-- id 와 for 로 연결한다. -->
+    <input type="checkbox" id="subject1" name="chkgroup" value="rule1" checked>
+    <label for="subject1">회칙</label>
+    <input type="checkbox" id="subject2" name="chkgroup" value="rule2">
+    <label for="subject2">회칙2</label>
+    <input type="checkbox" id="subject3" name="chkgroup" value="rule3">
+    <label for="subject3">회칙3</label>
+
+    <!-- 라디오버튼 (radio) :여러개 중 하나만 선택  -->
+
+    <label>
+        <input type="radio" name="'radiogroup" value="y" checked>동의함 </label>
+    <label>
+        <input type="radio" name="'radiogroup" value="no"> 동의하지 않음 </label>
+
+
+    <!-- y   동의 함에  /y는 써버에 전송 된다.  -->
+</body>
+
+</html>

@@ -11,6 +11,34 @@
 
 /* 플렉스 아이템 :width:auto;-> width:내용% */
 
+<<<<<<< HEAD
+=======
+.header {
+    width: 200px;
+    background: #999;
+
+    
+}
+
+.slide {
+    height: 400px;
+    background: #ccc;
+
+
+}
+
+.banner {
+    height: 200px;
+    background: #ccc;}
+
+.notice{height: 250px;background:blue}
+
+.footer {
+    height: 100px;
+    background: #111;
+}
+
+>>>>>>> 3898dfdc962e942055baf18d49f71f6a583097d2
 
 
 .wrap4 {

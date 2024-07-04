@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/* 해더 */
+header {
+    position: relative;
+}
+
+header.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1340px;
+    margin: 0 auto;
+    /* 블록레벨요소의 가로 가운데 배치: width, margin */
+
+    height: 100px;
+    border: 1px solid;}
+
+
+
+/* 로고 */
+.logo {
+    width: 190px;
+    text-align: center;
+}
+
+/* 내비게이션 */
+.gnb {
+    align-self: flex-end;
+    background: #111;
+}
+
+/* 1depth */
+.main {
+    display: flex;
+    height: 30px;
+}
+
+.main>li {
+    width: 160px;
+    height: 30px;
+    /* 모든 메뉴 가로 가운데 배치 */
+
+    /* 메인메뉴 텍스트 세로 가운데 배치: line-height크기를 height와 같은 크기로 지정 */
+    line-height: 30px;
+    text-align: center;
+}
+
+.main>li:hover {
+    background: #333;
+}
+
+/* 가상 서브바  */
+.main::before {
+    content: "";
+    position: absolute;
+    /* absoulte  높이 지정해줘야함  */
+
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    transition: .3s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* 2depth */
+.sub {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 0 20px;
+    /* 숫자가 작을 수록 빠르다. */
+    transition: .3s;
+    line-height: 2;
+}
+
+/* 선택자가 변경됨: >li 제거 */
+/* 유형1: .main>li:hover .sub { */
+.main:hover .sub {
+    height: 150px;
+    /* 위의 빨강색 영역 싸이즈  */
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub li a {
+    padding: 4px 16px;
+    /* 마우스 올렸을때 검은색  글씨에 붙게한다 */
+}
+
+.sub li:hover a {
+    background: #111;
+    /* 마우스 올렸을떼검은색  */
+}
+
+/* 유형3의 추가 코드 */
+
+
+
+
+.main:hover::before {
+    height: 150px;
+    opacity: 1;
+}

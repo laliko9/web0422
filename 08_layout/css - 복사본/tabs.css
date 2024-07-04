@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+#tab_wrap{
+    height: 300px;
+}
+
+
+
+.tabs {
+    position: relative;
+    left: 50px;
+    top:50px;
+    width: 550px;
+    height: 220px;
+    
+
+
+}
+
+.tabs label {
+    display: relative;
+    left: 30px;
+    top:1px;
+    padding: 4px 24px;
+    background: #999;
+    color: #777;
+    /* 손 모양  */
+    cursor: pointer;
+}
+
+/* 텝의 콘텐츠  */
+.tabs>div {
+    display: none;
+    /* position: absoulut 이면 width는 콘텐츠 크기  */
+    position: absolute;
+    width: 100%;
+    height: calc(100%-32Px);
+    /* 32px은 label의 높이 이는 padding 의4px 24px 로 결정된것 */
+    padding: 16px 24px;
+    border: 1px solid #ccc;
+}
+
+.tabs input {
+    display: none;
+}
+
+/* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택  */
+.tabs input:checked+label {
+    z-index: 99;
+    background: #fff;
+    color: #111;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}  
+ /* 텝의 콘텐츠  */
+.tabs input:checked+label+div {
+    display: block;
+}
+
+
+/* 공지사항 */
+.tab1  li{
+    line-height: 2.3;
+    border-bottom: 1px dotted #ccc;
+}
+
+.tab1 li a{
+    display: inline-block;
+    width: 422px;  
+    
+
+}
+/* 겔러리 콘텐츠 */
+.tab2 ul {
+    display:flex;
+    justify-content: space-between;
+    line-height: .2;
+    margin-top: 5px;
+
+}
+.tab2 span {
+    display: block;
+    width: 150px;
+    height: 100px;
+    background:  #ccc;
+}
+        

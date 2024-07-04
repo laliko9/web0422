@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+
+/* 링크 영역  */
+
+
+#link {
+    height: 100px;
+    padding: 20px;
+    background: yellow;
+}
+#link li a {
+    display:flex;
+    align-items: center;
+}
+#link ul {
+    display:flex;
+    justify-content: space-around;
+}
+
+/* 아이콘 이미지  */
+#link ul li a span {
+    /* display:inline-block; */
+    /* 줄바꿈 안하려고 인라인 불럭  */
+    width: 60px;
+    height: 60px;
+    
+    background:#ccc;
+    /* 인라인 요소의 수직 배치 */
+    /* 안쓰면 밑으로 이름이깔린다. */
+        margin-right: 24px;}
+  
+    

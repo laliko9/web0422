@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); */
+
+
+
+body, ul {
+    margin: 0;
+}
+
+ul {
+  padding:0;
+  margin: 0;
+  list-style: none;
+}
+
+
+
+
+        
+/* 슬라이드 :패이드 (fade)효과 나타났다 사라졌다하는 기능이다  */
+        .slide {
+            position: relative;
+            width: 500px;
+            height: 150px;
+            margin: 20px;
+            overflow: hidden;
+        }
+        .slide ul {
+            height: 100%;
+            /* 부모크기의 100% */
+        }
+        .slide li {
+            position: absolute;
+            /* 이 기능으로 3장을 겹치게한다 absolute */
+            width:100%;
+            height:100%;
+        }
+
+        /* 이 밑에 부터는 애니메이션 관련이다  */
+        
+            /* 불투명도에는 0 사라졌다가 
+            opacity투명도에 그림이 나타난다.
+         */
+        
+         .slide li {
+            opacity: 0;
+
+         }
+.slide li first-child{
+    opacity: 1;
+}
+    
+
+        /* animation */
+        .slide li:nth-of-type(1) {animation: fade1 9s infinite;}
+        .slide li:nth-of-type(2) {animation: fade2 9s infinite;}
+        .slide li:nth-of-type(3) {animation: fade3 9s infinite;}
+
+
+        /* 한장은 서서히 나타남 : 0-> 1
+           한장은 서서히 사라짐: 1->0
+           숨김:0 (한장은 아예안보임 3장의 사진중에 맨 마지막장이다 ) */
+        @keyframes fade1 {
+            0% {opacity: 0;}
+            10% {opacity: 1;}
+            33% {opacity: 1;}
+            43% {opacity: 0;}
+            100% {opacity: 0;}
+        }
+        @keyframes fade2 {
+            0% {opacity: 0;}
+            33% {opacity: 0;}
+            43% {opacity: 1;}
+            66% {opacity: 1;}
+            76% {opacity: 0;}
+            100% {opacity: 0;}
+        }
+        @keyframes fade3 {
+            0% {opacity: 1;}
+            10% {opacity: 0;}
+            66% {opacity: 0;}
+            76% {opacity: 1;}
+            99.99% {opacity: 1;}
+            100% {opacity: 1;}
+        }
+
+      
+    </style>
+</head>
+<body>
+    
+        <div class="slide">
+            <ul>
+                <li><img src="s1.jpg" alt="슬라이드 이미지1"></li>
+                <li><img src="s2.jpg" alt="슬라이드 이미지2"></li>
+                <li><img src="s3.jpg" alt="슬라이드 이미지3"></li>
+            
+            </ul>
+        
+    
+    </div>
+</body>
+</html>

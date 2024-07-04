@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallery-Festival_이소영</title>
+    <style>
+        /* 초기화 */
+        * {
+            /* padding과 border가 width/height에 포함된다 */
+            box-sizing: border-box;
+        }
+        body,h1,p,ul {
+            margin: 0;
+            /* 같은 속성까지는 ,을 할 수 있다. 
+            * 모든것에 마진을 준다는 뜻이다 본문에 있는 마진을 0으로 처리
+            html.body 등등   모든것들......
+            ul은 margin 만 있다. 더 구체적인것을 위해 margin-left  로 한다 
+            */
+        }
+        ul{ padding:0;
+            list-style: none;
+            
+        }
+        a{
+            text-decoration: none;
+        color: #333;}
+
+        /* 초기화를 위쪽에 해놓고 밑에붙어 써 내려간다 쓰는 순서  */
+
+        /* 타이포 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        /* 구글폰트 서치 -> noto sans kr  찾고  */
+
+        body{
+            font:15px/1.6 "Noto Sans KR", sans-serif;
+            /* 15px의 1.6배라는 의미  속기형으로 씀 구글폰트  노토 산슬 -> get embed code  누르면 두개나옴 
+link -> html / @import ->css  이다  
+ */
+        }
+        /* 풀페이지 레이아웃 (fullpage layout) */
+       
+        .wrap{
+            position: fixed;
+            width: 100%;
+            height:100%;
+            /* border:2px solid red; */
+        }
+         /* 해더 */
+        header {
+            display: flex;
+            justify-content: center;
+            /* 좌우가운데  justify-content */
+            align-items: center;
+            /* 위아래 가운데쪽 align-items작용 부모영향 요소  */
+            height: 200px;
+            background: yellow;
+        }
+
+
+                     /* 로고 */
+        .logo {
+            animation: logo 1s;
+            margin-top:0px;
+        }
+        
+        
+        @keyframes logo {
+        0% {margin-top: -300px;}
+        100% {margin-top: 0px;}
+        
+        }
+
+
+            /* 블랙 레벨 요소의 가로 가운데 배치 하려면  width가 있는 상태에서 
+            margin:0 auto;처리한다 */
+
+       /* 내비게이션 */
+        
+            .gnb {
+                 display:flex;
+                 justify-content: center;
+                /* display:flex  영역만큼 크기가 바뀜 */
+                position: relative;
+                z-index: 9999;
+                /* 더 올라갈 수 없기때문에 가장 높은것 9999 가장 큰 숫자를 쓴다. */
+                
+                background:olive;
+        }
+    
+        /*  1depth */
+        .main{
+            display: flex;
+            height: 40px;
+            /* 메인 메뉴가 가로배치된이유 */
+        }
+        .main>li {
+            width: 160px;
+            height: 40px;
+            /* 모든 메뉴 가로 가운데 배치 .메뉴 한칸이다 main>li 160은 글짜수 많으면 줄바꿈됨 고려해야한다*/
+            text-align: center;
+            /* 메인메뉴 텍스트 세로 가운데 배치: line-height 크기를 height 크기로 지정; */
+            line-height: 40px;
+        }
+        .main>li:hover {
+            background: rgba(255, 85, 0, 0.686);
+        }
+
+        /*  2depth */
+        .sub {
+            height: 0;
+            overflow: hidden; 
+            opacity: 0;
+            /* 서서히 나오게 하려는 작용은 height와 opacity이다 */
+            /* 평상시에는 안보이게 숨기려고
+            높이값을 0으로 했지만 넘쳐서 보이므로 
+            overflow:hidden처리 */
+            visibility: hidden;
+            /* Visiblity와 opacity 공통점 자리는 차지고하고 있다, 
+               display:none은 아예 제거하는거다. 
+               display:none; visivility:hidden; 은 tiainsition속성이 적용되지 않는다 */
+               /*  메인 메뉴를 통하지 않고 서브에 직접 마우스 오버시 서브 메뉴가 나타나지 않게 한다. */
+            padding: 10px 0 20PX;
+            /* 소수점 옆에 0은 생략 가능  */
+            transition: .3s;
+            /* 0.3초 동안 높이가 0에서 120으로 바뀌는 과정을 보여줌 */
+            line-height: 2;
+            /* 서브 메뉴간의 간격이 필요해서 쓰임 서브 메뉴와 메뉴간의 줄간격 */
+        }
+
+
+        .main:hover .sub{
+            height: 150px;
+            visibility:visible;
+            opacity: 1;
+     
+            
+        }
+
+    .sub li a {
+        padding: 4px 16px;
+        color: white;
+    }
+
+    .sub li:hover a {
+            background: #111;
+        }
+
+
+
+/* ::before, ::after를 가상요소 .선택자 
+
+<ul class_"main">
+    ::before
+    <li>메인메뉴</li>
+    <li>메인메뉴</li>
+    <li>메인메뉴</li>
+    <li>메인메뉴</li>
+    ::after
+    </ul> */
+    
+.main::before {
+  content: "";
+  position: absolute;
+  /* absolute는 반드시 높이 크기 지정해야함  */
+  z-index:  -1;
+  /* 높낮이 -1 밑으로 내려가고  바에서 +1 하면 위로 간다  */
+  top: 40px;
+   left: 0; 
+   /* 지금은 화면에 가득차 있기 때문이다  */
+  /* display:block; display:inline-block;또는 position:static; 이 아니면 width와 height가 
+  지정된다. */
+  width: 100%;
+  height: 0;
+  opacity:0;
+  transition: .3s;
+  background: rgba(0, 0, 0, 0.5);
+}
+.main:hover::before {
+  height: 150px;
+  opacity: 1;
+
+}
+
+             /* 슬라이드 */
+            .slide {
+                height: calc(100% - 340px);
+                /* width:500px; */
+                overflow: hidden;
+            }
+
+            
+        .slide ul {
+            
+            display: flex;
+          /* flex 롤 가로 처리  */
+            width: 400%;
+            height: 100%;
+            animation: slide 12s infinite;
+        }
+        
+
+        .slide li {
+        width: 25%;
+        height: 100%;
+        background: no-repeat 50% 50%/cover;
+        text-indent:-9999em;
+        
+    }
+    
+    .slide li:nth-child(1){background-image: url(images/slide1.jpg);}
+    .slide li:nth-child(2){background-image: url(images/slide2.jpg);}
+    .slide li:nth-child(3){background-image: url(images/slide3.jpg);}
+    .slide li:nth-child(1){background-image: url(images/slide1.jpg);}
+    
+    
+    
+    /* animation */
+    
+        @keyframes slide {
+            0% {transform:translate(0%, 0%);}
+            10% {transform:translate(-25%, 0%);}
+            33% {transform:translate (-25%, 0%);}
+            43% {transform:translate (-50%, 0%);}
+            66% {transform:translate (-50%, 0%);}
+            76% {transform:translate (-75%, 0%);}
+            99.99% {transform:translate (-75%, 0%);}
+            100% {transform:translate(0%,0%);}
+        }
+
+    
+
+         /* 푸터 */
+
+        footer { 
+                height: 100px;
+                line-height: 100px;
+                background:gray;
+                text-align: center;
+                color:red;
+
+                 }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <!-- 해더:로고 -->
+        <header>
+            <h1 class="logo"><a href="#">Vallery Festival</a></h1>
+        </header>
+    <!--  내비게이션 -->
+    
+    <nav class="gnb">
+        <!-- 1depth -->
+        <ul class="main">
+            <li>
+                <a href="#">메인메뉴1</a>
+                <!-- 2depth -->
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메인메뉴2</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메인메뉴3</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메인메뉴4</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+        <!-- 슬라이드-->
+        <div class="slide">
+            <ul>
+                <li>슬라이드이미지1</li>
+                <li>슬라이드이미지2</li>
+                <li>슬라이드이미지3</li>
+                <li>슬라이드이미지4</li>
+            </ul>
+        </div>
+        <!-- 푸터 -->
+<footer><p>Copyr/ight 2024. Vallery Festival. All rights reserved.</p></footer> 
+</div>
+</body>
+</html>
