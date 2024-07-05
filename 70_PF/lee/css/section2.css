@@ -19,7 +19,7 @@
 
 /* 탭의 버튼  */
 #s2 #tabs >ul { position: absolute; right: 0;width: 474px;}
-#s2 #tba>ul>li (first-child)
+#s2 #tba>ul>li:not(:first-child){margin:0 16px;}
 
 
 /* 탭의 콘텐츠  */

@@ -157,26 +157,26 @@
         background: rgb(239, 238, 238);
     }
 
-    div {
+    #s1 {
         width: 1180px;
         margin: 0 auto;
     }
 
-    section {
+   #s1 section {
 
     
         padding: 0 auto;
     
     }
 
-    h2 {
+    #s1 h2 {
         font-size: 50px;
         text-align: center;
         margin-top: 20px;
         margin-bottom: 50px;
     }
 
-    p {
+   #s1 p {
         position: relative;
         padding-top: 50px;
         padding-left: 50px;
@@ -185,7 +185,7 @@
     }
 
 
-    li {
+   #s1 li {
         display: inline-block;
         width: 280px;
         height: 480px;
@@ -196,7 +196,7 @@
 
     }
 
-    li>p {position: relative;
+    #s1 li>p {position: relative;
     
         bottom:4px; 
         margin-top:110px;
@@ -208,19 +208,19 @@
 
     }
 
-    li>div {
+    #s1 li>div {
         width: 280px;
         height: 280px;
     }
 
 
-    ul {
+    #s1 ul {
         list-style: none;
         flex-wrap: wrap;
 
     }
 
-    span>a {
+   #s1 span>a {
         padding:0 auto;
         color: white;
         font-size: 16px;
@@ -231,7 +231,7 @@
         
     }
 
-    span {
+   #s1 span {
         display: inline-block;
         width: 110px;
         height: 35px;
