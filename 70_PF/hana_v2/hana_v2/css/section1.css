@@ -20,12 +20,17 @@ section {
 
         .bx-wrapper .bx-pager.bx-default-pager a {
             background: blueviolet;
+            margin: 0 18px;
         
            }
         
    .bx-wrapper .bx-pager.bx-default-pager a.active{
+    transform: scale(2,2);
     background: greenyellow;
 
    }
+   .bx-wrapper .bx-next {
+    right: 10px;
+    background: url() -43px -32px no-repeat;
 
-    
+   }
