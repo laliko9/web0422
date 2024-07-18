@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #modal {
+            display: none;
+            position:fixed;
+            /* 왼쪽 상단으로 배치 */
+            left:0;
+            top:0;
+            background: rgba(255, 255, 0, 0.178);
+            width: 100%;
+            height: 100%;
+        }
+        #modal .popup{
+            position: absolute;
+            /* 가운데에 팝업 뜨도록 */
+            left:50%;    
+            top:50%;
+            transform: translate(-50%, -50%);
+
+            width: 600px;
+            height: 400px;
+            background: lightblue;
+            padding: 20px;
+        }
+
+        #modal .popup button{
+            position:absolute;
+            /* 아래에서 20, 오른쪽에서 20만큼 떨어뜨리기 */
+            bottom:20px;
+            right:20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 콘텐츠 -->
+    <div id="notice">
+        <ul>
+            <li><a href="#">목록1</a></li>
+            <li><a href="#">목록2</a></li>
+            <li><a href="#">목록3</a></li>
+            <li><a href="#">목록4</a></li>
+        </ul>
+    </div>
+
+    <!-- 페이지 가리는 용도로 -->
+     <div id="modal">
+        <!-- 실제 팝업 -->
+        <div class="popup">
+            <h2>모달 팝업</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos provident consectetur tempora debitis voluptate natus officia expedita qui accusantium nobis maiores dignissimos fugit, fugiat rerum, iusto facere incidunt, reprehenderit dolor!</p>
+            <button>닫기</button>
+        </div>
+     </div>
+
+     <script>
+        // 요소찾기
+        const firstList = document.querySelectorAll('#notice a').item(0);
+        //console.log(fli);
+        const modal = document.querySelector('#modal');
+        const closeBtn = modal.querySelector('button');
+        //const closeBtn = modal.querySelector('#modal button');
+        //console.log(closeBtn);
+
+        //이벤트 처리
+        // firstList.click = function(){
+        //     modal.classList()
+        // }
+
+        firstList.onclick = function(){
+            modal.style.display="block";
+        }
+
+        closeBtn.onclick = function(){
+            modal.style.display="none";
+        }
+     </script>
+</body>
+</html>

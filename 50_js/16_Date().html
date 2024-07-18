@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>날짜와 시간</h1>
+
+    <script>
+        //날짜와 시간 표시하는 객체
+
+        //생성자 함수
+        //date는 날짜/시간 인스턴스 객체
+        const d = new Date();
+
+        //+연산자는 숫자에서는 더하기, 문자에서는 연결한다는 의미
+        document.write(d + "<br>");
+        //년 : 
+        const yy = d.getFullYear();
+        //월 : 0~11 -> +1
+        const mm = d.getMonth()+1;
+        //일 : 1~31
+        const dd = d.getDate();
+        //시 : 0~23
+        const hh = d.getHours(); 
+        //분 : 0~59
+        const mi = d.getMinutes();
+        //초 : 0~59
+        const ss = d.getSeconds();
+        document.write("<hr>" + yy + "년" + mm + "월" + dd + "일<br>" + hh + ":" + mi + ":" + ss);
+
+        //백틱표기법으로 변경
+        document.write(`<hr> ${yy}년${mm}월${dd}일<br>${hh}:${mi}:${ss}`);
+
+
+    </script>
+</body>
+</html>
