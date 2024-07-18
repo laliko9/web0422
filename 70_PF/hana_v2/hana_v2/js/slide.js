@@ -19,7 +19,7 @@
 
 $(document).ready(function(){
     // 문서가 준비되면 실행할 코드 ;
-$('.bxslider').bxSlider({
+$('.slide').bxSlider({
 
     // ///////////////////////////////////////////////////////
 
