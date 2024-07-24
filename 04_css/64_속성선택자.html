@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+            ~ tilde, 틸더
+            | vertical bar 또는 pipe, 파이프
+            
+            * caret, 캐럿
+            ^ dollar sign, 달러 사인
+            $ asterisk, 아스테리스크
+            ........................................................................
+            속성선택자
+            [속성]-> 속성을 갖고 있는 요소 
+            [속성 = "값"]-> 속성 = 값을 갖고 있는 요소 
+
+            [속성 = "값"]-> 포함하는  
+        [속성~="값"]   ~ 포함하는 값(공백으로 포함되는 )
+        [속성|="값"]  | 시작하는
+            
+         [속성*="값"] * 포함하는
+        [속성^="값"] ^ 시작하는
+        [속성$="값"]$ 끝나는
+-> com, com_on, on com, ...
+            -> en, en-, en_, en us, us-en, us_en, us en 
+        */
+/* 
+        [title] {text-decoration: none;} */
+        /* [title="en"]{border-bottom:2px solid yellow;} */
+        /* [title="en"] {color: #333;}
+        
+        [title~="en"] {border: 2px solid red;}*/
+        [title|="en"] {background: yellow;} 
+        
+        /* [title^="en"] {background: yellow;}
+        [title$="en"] {border: 2px solid red;}
+        [title*="en"] {color: red;} */
+
+    </style> */
+</head>
+<body>
+    <h1>속성 선택자</h1>
+    <a href="#" title="en">링크1</a>
+    <a href="#" title="en-">링크2</a>
+    <a href="#" title="en-us">링크3</a>
+    <a href="#" title="en_">링크4</a>
+    <a href="#" title="en us">링크5</a>
+    <a href="#" title="us_en">링크6</a>
+    <a href="#" title="us en">링크7</a>
+    <a href="#" title="us en ko">링크8</a>
+    <a href="#">링크9</a>
+   
+  
+</html>
