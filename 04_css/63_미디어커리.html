@@ -117,8 +117,13 @@
 
         /* https://www.w3schools.com/css/css_rwd_intro.asp */
         /* 최소 600px 이상의 장치: tablet */
-        @media (min-width: 600px) {
+        @media (min-width: 576px) {
             .section {display: flex; flex-wrap: wrap;}
+            /* 
+            flex-grow:1
+            flex-shrink:0
+            flex-basis:px, %,....
+            flex: grow shrink  basis; */
             .menu {flex:33%;}
             .main {flex:67%;}
             .aside {flex:100%;}
