@@ -92,10 +92,7 @@ header {
     height: 100px;
 }
 
-<<<<<<< HEAD:90_test/프로토타입제작및 사용성테스트_이소영/pro.css
-=======
 
->>>>>>> 643cc2a6c61746acf1948348855068bd9f278e84:90_test/프로토타입제작및 사용성테스트_이소영/css/pro.css
 
 .gnb {
     z-index: 9999;
@@ -343,19 +340,15 @@ span>button {
     height: 253.5px;
     position: absolute;
     background: #212121;
-    margin-bottom: 0;
+            margin-bottom: 0}
 
-}
 
-<<<<<<< HEAD:90_test/프로토타입제작및 사용성테스트_이소영/pro.css
 .footer_line {
     display: flex;
     align-items: center;
 
     height: 60px;
 }
-=======
->>>>>>> 643cc2a6c61746acf1948348855068bd9f278e84:90_test/프로토타입제작및 사용성테스트_이소영/css/pro.css
 
 
 
@@ -401,4 +394,3 @@ span>button {
     margin-right:30px;
     margin-top:10px;
 }
-
