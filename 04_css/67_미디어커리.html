@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+ /* 모바일 우선디자인: 작은 장치 -> 큰장치 */
+ body * {outline: 1px dotted lime;}
+ /* 공통 */
+
+
+ .bx {
+    display:flex;
+   
+   
+ }
+ .bx div{
+  /* 블록레벨 요소는 width쓰지 않으면,auto가 100% */
+    height: 300px;
+    background: yellow;
+    font-style:50px;
+    margin: 20px;
+    
+ }
+ /* .bx div:first-child {
+    margin-left: 30px;
+ }
+ .bx div:last-child {
+    margin-right: 30px;
+ } */
+ /* 폰 */
+ .bx {
+    width: 300px;
+    /* 가로 가운데 배치 : width+margin*/
+    margin: 0 auto;
+ }
+ .bx{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+ }
+
+        @media (min-width: 576px) {
+            /*  테블릿 */
+            body {background: lightblue;}
+            .bx{flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .bx div {
+                flex-grow: 1; /*늘어남*/
+                flex-shrink: 0; /*줄어들지않음*/
+                flex-basis:auto;
+            }
+        }
+        @media (min-width: 992px)  {
+            /* 데스크탑 */
+            body {background: lightgreen;}
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h2>미디어쿼리 테스트</h2>
+    <div class="bx">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+
+    </div>
+    
+</section>
+</body>
+</html>

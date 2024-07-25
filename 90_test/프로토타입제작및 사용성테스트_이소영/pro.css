@@ -92,16 +92,6 @@ header {
     height: 100px;
 }
 
-.tlogo {
-
-    align-items: center;
-    width: 375px;
-    margin: 0 auto;
-}
-
-.tlogo div {
-    height: 20px;
-}
 
 .gnb {
     z-index: 9999;
@@ -356,7 +346,7 @@ span>button {
 .footer_line {
     display: flex;
     align-items: center;
-    background: #F0CD00;
+
     height: 60px;
 }
 
