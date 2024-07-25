@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+    </style>
+    <script>
+        // 로드 이벤트
+        window.addEventListener("DOMContentLoaded", function(){
+            // 요소 찾기
+            const p = document.querySelector("p");
+            const mbx = document.querySelector(".mbx");
+
+            // 스크롤 이벤트
+            window.addEventListener("scroll", function(){
+
+                // 스크롤양을 p요소에 넣기
+                p.innerHTML = Math.floor(pageYOffset);
+
+                // 스크롤양 비교
+                if(p.innerHTML >= 1750) {
+                    // .active 클래스를 추가
+                    mbx.classList.add("active");
+                } else {
+                    // .active 클래스를 제거
+                    mbx.classList.remove("active");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>

@@ -5,13 +5,12 @@
 
 
 body {
-    margin-left:0;
-    margin-top:0;
-    margin:0;
+
+    margin:0 auto;
 }
 
 a {
-    /* 텍스트 밑줄 제거 */
+   
     text-decoration: none;
 }
 body,
@@ -32,23 +31,24 @@ ul {
 
 /* header */
 .top {
-    font-size: 15px;
+    font-size: 30px;
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 100px;
     background: #F0CD00;
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
+    text-align: right;
 }
 
 .top_link {
     margin: 30px;
 }
-
 .top_link a {
     margin-right: 30px;
 }
+
 
 .top_link2 {
     padding: 0;
@@ -92,6 +92,10 @@ header {
     height: 100px;
 }
 
+<<<<<<< HEAD:90_test/프로토타입제작및 사용성테스트_이소영/pro.css
+=======
+
+>>>>>>> 643cc2a6c61746acf1948348855068bd9f278e84:90_test/프로토타입제작및 사용성테스트_이소영/css/pro.css
 
 .gnb {
     z-index: 9999;
@@ -343,17 +347,16 @@ span>button {
 
 }
 
+<<<<<<< HEAD:90_test/프로토타입제작및 사용성테스트_이소영/pro.css
 .footer_line {
     display: flex;
     align-items: center;
 
     height: 60px;
 }
+=======
+>>>>>>> 643cc2a6c61746acf1948348855068bd9f278e84:90_test/프로토타입제작및 사용성테스트_이소영/css/pro.css
 
-.footer_line p {
-    margin-left: 320px;
-    margin-right:-290px;
-}
 
 
 .footer img{
@@ -375,7 +378,7 @@ span>button {
     font-weight: 500;
     line-height: 24.16px;
     color: #989B98;
-    font-size: 14.5px;
+    font-size: 20px;
     left:320px;
     top: 100px;
 }
