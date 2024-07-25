@@ -22,8 +22,9 @@
             padding: 0;
             list-style: none;
         }
+        
 
-        img {
+        img,video {
             width: 100%;
             max-width: 100%;
             height: auto;
@@ -206,6 +207,20 @@
 
         <!-- 사이드 콘텐츠 -->
         <aside class="aside">
+
+            <!--
+            constorls: 플레이 버튼/ 정지 버튼
+            autoplay + muted: 자동 플레이 
+            muted: 소리끄기 
+            loop : 무한 반복 
+            -->
+            <video autoplay muted loop>
+
+        <source src="../assets/mov_bbb.mp4" type="video/mp4">
+        <source src="../assets/mov_bbb.webm" type="video/webm">
+        <source src="../assets/mov_bbb.ogv" type="video/ogg">
+            </video>
+
             <div>
                 <h2>What?</h2>
                 <p>Chania is a city on the island of Crete.</p>
