@@ -6,34 +6,110 @@ body * {
 }
 
 /* 공통 */
-body {
+* {
+    box-sizing: border-box;
+    /* 박스싸이징 써야지 안늘어난다  */
+}
+html {
+    font-size: 10px;
+}
+
+body,
+ul {
     margin: 0;
+}
+
+body {
+
     color: #333;
     background: #fff;
+    /* font: [굵기] [기울임]  크기 .글꼴 */
+    font:1.5rem  Arail, 굴림, san-serif;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
 
 a {
     color: #333;
+    text-decoration: none;
 }
 
 /* A영역 헤더 */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 30px;
+    /* 항상 맨 왼쪽 오른쪽 두개였을대 가각 오른 쪽 왼쪽 붙는다. 
+        space-between  3개면 균등하게 쪼개짐
+        shif + alt  +F 정렬 
+    */
+    display: flex;
     height: 100px;
     width: 1340px;
     margin: 0 auto;
 }
 
+/* 로고 */
+.logo {
+    width: 190px;
+    height: 44px;
+}
+/* 네비게이션  */
+nav {
+    align-self:flex-end ;
+    /* flex -end  밑에 붙게한다 */
+}
+/* 1뎁스 */
+/* ul.main =.main  붙여서 쓴다  */
+ul.main {
+    display: flex;
+    font-size: 1.8 rem;
+    font-weight: bold;
+}
+
+.main>li>a  {
+    /* margin 상하좌우 ,글자는 상속 안된다. 꺽은가로 자식만  main 띄우고 li 밑에 자손까지 영향이 있음  */
+    display:block;
+    /* block  와 inline-block 
+    block 은 a쪽에 많으면 새로로 줄바뀜 / 많으면 inline-block  옆으로 배치
+
+        inline-block  1 가로가능함 . 2 block성향있기때문에 w.h  지정 가능
+        3. video 는 w.h 가능하다.4. inlin-block 은 줄바꿈이 안된다.
+    */
+
+    padding: 16px 24px;
+
+}
+.main>li>a:hover {
+    background: #e31a40;
+}  
+
+
+/* 2뎁스 */
+.sub {
+    display: none;
+    font-size: 1.4 rem;
+}
+
 /* b영역  */
 #slide {
+    overflow: hidden;
     height: 350px;
 }
 
 /* c와 d영역 공통 */
-.container {position: relative;
+.container {
+    position: relative;
     top: -100px;
     width: 1340px;
     margin: 0 auto;
 }
+
 /* DUDDUR */
 #link {
     height: 100px;
@@ -50,7 +126,21 @@ header {
 
 
 /* d영역 헤더 */
+/* 가로배치는 무조건  display -flex */
 footer {
+    display: flex;
+    align-items: center;
     height: 100px;
-    margin: 0 auto;
+    padding: 0 30px;
+
 }
+.flogo {
+    width: 190px;
+}
+    .addr {
+        width: 900px;
+
+    }
+    .fs {
+        width: 240px;
+    }
