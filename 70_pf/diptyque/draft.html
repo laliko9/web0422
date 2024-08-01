@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diptyque </title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        F .tablet,
+        .desktop {
+            display: none;
+        }
+
+
+        /* 
+             background-color: 배경색 
+             background-image : url (이미지);
+             background-repeat: 반복;
+             background-position: X위치, y위치;
+            x는 좌우, y는 상하 
+             background-size:가로 [세로]
+             background-attachment: fixed; -> 패럴렉스 스크롤링 
+             background: 색상; 이미지 [반복 ][위치 ]/ [크기] [고정];
+                       이미지를 넣었을때에는  반복,위치,크기 ,고정이 필요함 
+              */
+
+
+
+        /* 반복허려면 background-image 바꾸고 no-repeat 00/100%  준다  */
+        /* w와 h 를 주어야지만 이미지가 보인다.  */
+
+        /* img {width: 100%;vertical-align: top;} */
+        /* img 배꼬 html  div   백르라운드  */
+        /* 반응형으로 하기 위해서는  witdht: 100%  을주면 화면 커지면서 반응형으로 바뀜  */
+
+        @media (min-width:576px) {
+            .tablet {
+                display: block;
+            }
+
+            .phone {
+                display: none;
+            }
+
+        }
+
+        @media (min-width:992px) {
+            .desktop {
+                display: block;
+            }
+
+            .phone {
+                display: none;
+            }
+
+            /* w와 h 를 주어야지만 이미지가 보인다.  */
+        }
+    </style>
+    <script>
+        // js에서 img 의 속성 (attribute)을 변경하는 메서드?
+        // ->객체, setAttribute ("src", " desktop.png");
+        // ->rprc[.src = "desktop.png"]
+
+
+    </script>
+</head>
+
+<body>
+    <img class="phone" src="phone.png" alt="폰이미지">
+    <img class="tablet" src="tablet.png" alt="테블릿">
+    <img class="desktop" src="desktop.png" alt="데스크탑">
+
+</body>
+
+</html>
