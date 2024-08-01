@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* transform(변형): 2D (X,y), 3D(x,y,z)
+            rotate(회전)
+            translate (위치)
+            skew(기울임)
+
+            2D
+            transform; rotate(숫자 deg);
+
+
+            3D (x,y,z)
+            transform; rotateX(숫자 deg);
+            transform; rotateY(숫자 deg);
+        */
+        .rot {
+            display: flex;
+            height: 400px;
+            border: 1px solid red;
+
+        }
+
+       .rot div {
+            width: 300px;
+            height: 300px;
+            border:  1px solid blue;
+            margin: 20px;
+
+            /* 
+            perspective: 숫자 ; 원근
+            transform을 적용한 부모 요소에 지정한다.
+            숫자는 800 ~1000
+            3D 효과를 줄때 사용!
+            */
+            perspective: 1000;
+           
+          
+            /* 90deg (angel=각도) deg*/
+        }
+
+        span {
+            display: block;
+            width: 300px;
+            height: 300px;
+            background: yellow;
+            transition:1s;
+
+          
+            /* 90deg (angel=각도) deg*/
+        }
+       .rot div:first-child:hover span {
+            transform: rotate(720deg);
+        }
+            /* 
+            transition(전환)
+            transition-property :속성;
+            transition-duration : 전환시간;
+            transition-delay: 시간;
+            transition-timing-function:가속도;
+            transition-delay: 지연시간;
+
+            transition: [속성] 전환 [가속도] [지연시간]
+            */
+            .rot div:nth-child(2):hover span {
+            transform: rotateX(720deg);
+        }
+        .rot div:last-child:hover span {
+            transform: rotateY(720deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>변형</h1>
+
+    <div class="rot">
+        <div><span>2D</span></div>
+        <div><span>3D-X</span></div>
+        <div><span>3D-Y</span></div>
+    </div>
+
+    <div>회전</div>
+</body>
+</html>
