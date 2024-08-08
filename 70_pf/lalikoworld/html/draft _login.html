@@ -15,9 +15,20 @@
         [alt*="PC"]{display:none;}
         /* *의 의미는 pc의 단어를 포함한다는 의미이다. */
         @media(min-width: 768px){
+            /* tablet */
+            [alt="phone"]{display: none;}
+            [alt="tablet PC"]{display: none;}
             
         }
         @media(min-width: 998px){
+
+            /* disktop  */
+            /* 속성선택자 
+                [속성="값"] ->값 일치 
+                [속성="값"] ->값 일치 */
+
+            [alt*="ta"]{display: none;}
+            [alt*="d"]{display: block;}
 
         }
 
@@ -26,9 +37,9 @@
 <body>
     <!-- 파일 명명 규칙
      시안_ 페이지명_장치aud.png -->
-    <img src="../assets/logo (2).png" alt="desktop PC">
-    <img src="../assets/logo (2).png" alt="tablet PC">
-    <img src="../assets/logo (2).png" alt="phone">
+    <img src="../assets/desktop.png" alt="desktop PC">
+    <img src="../assets/tablet.png" alt="tablet PC">
+    <img src="../assets/phone.png" alt="phone">
 
     <!-- ../assets/login/draft_login_da.png -->
     <!-- ../assets/login/draft_login_ta.png -->
