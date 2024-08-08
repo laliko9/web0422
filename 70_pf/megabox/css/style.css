@@ -218,7 +218,9 @@ nav {
 
     /* 섹션4 */
     #sec4 .map {
-        height: 845px;
+        /* height: 845px;/ */
+
+        height: 50%;
     }
 
 }

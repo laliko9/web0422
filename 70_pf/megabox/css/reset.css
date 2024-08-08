@@ -28,6 +28,8 @@ button {
     cursor: pointer;
 }
 iframe {
+    /* iframe / 지도이다 
+    박스는 크기를 갖지 않는다. */
     border:none;
     width: 100%;
     height: 100%;
