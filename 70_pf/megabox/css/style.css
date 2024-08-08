@@ -66,14 +66,22 @@ section li {
 
 /* 섹션3 */
 #sec3 li {
+  
     margin-bottom: 48px;
 }
 
 #sec3>p {
     margin-bottom: 48px;
 }
-
-#sec3 h3,
+#sec3 li h3 {
+     /* 줄바꿈 안되게 하기 위해  */
+    text-wrap: nowrap;
+    /* 화면에 넘지 않게  */
+    overflow :hidden;
+   /* .... 생략 ellipsis  생략 효과는 text-wrap/overflow/text-overflow  해야지 생략효과가 적용된다. */
+    text-overflow: ellipsis
+}
+#sec3 li h3,
 #sec3 li p:last-of-type {
     margin: 24px 0;
 }
@@ -84,6 +92,19 @@ section li {
     padding: 12px 0;
 }
 
+   /* 섹션3 */
+   #sec3 li {
+    position: relative;
+}
+#sec3 li p:last-of-type {
+    margin: 24px 0 64px;
+}
+
+#sec3 a {
+    position: absolute;
+    width: 100%;
+    bottom:0;
+}
 /* 섹션4 */
 #sec4>p {
     margin-bottom: 24px;
