@@ -1,17 +1,8 @@
 @charset "utf-8";
 
-/* 사용후 지울것 */
-body * {
-    outline: 1px solid lime;
-}
-
 /* 공통 */
 * {
     box-sizing: border-box;
-}
-
-html {
-    font-size: 10px;
 }
 
 body,
@@ -22,8 +13,7 @@ ul {
 body {
     color: #333;
     background: #fff;
-    /* font: [굵기] [기울임] 크기 글꼴; */
-    font: 1.5rem Arial, 굴림, sans-serif;
+    font: 15px Arial, 굴림, sans-serif;
 }
 
 ul {
@@ -35,7 +25,11 @@ a {
     color: #333;
     text-decoration: none;
 }
-img { 
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     vertical-align: top;
 }
 
@@ -86,10 +80,78 @@ nav {
 
 /* B영역 */
 #slide {
+    width: 100%;
     height: 350px;
+    overflow: hidden;
 }
-#slide ul{
+
+#slide ul {
+    position: relative;
     display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 9s infinite;
+}
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+
+    10% {
+        left: -100%;
+    }
+
+    33% {
+        left: -100%;
+    }
+
+    43% {
+        left: -200%;
+    }
+
+    66% {
+        left: -200%;
+    }
+
+    76% {
+        left: -300%;
+    }
+
+    99.99% {
+        left: -300%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#modal .popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    background: #d8f6a4;
+    padding: 20px;
+}
+
+#modal .popup button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
 
 /* C와 D영역 공통 */
@@ -133,12 +195,14 @@ nav {
     align-items: center;
     height: 150px;
     padding: 0 70px;
-    border:1px solid blue;
+    border: 1px dotted #333;
 }
+
 #banner img {
     width: 100px;
     height: 80px;
 }
+
 #banner .txt {
     /* 상우하좌 */
     margin: 0 160px 0 24px;
@@ -149,32 +213,43 @@ nav {
     height: 300px;
     padding: 20px 40px;
 }
+
 #board>div {
-    width: 600px; 
+    width: 600px;
     height: 260px;
 }
-/* 공지사항  */
 
+/* 공지사항 */
 .notice {
-    margin-right: 60px;
     line-height: 2;
+    margin-right: 60px;
 }
+
+.notice li {
+    border-bottom: 1px dotted red;
+}
+
 .notice a:hover {
     font-weight: 700;
 }
-.notice sapn {
+
+.notice span {
     display: inline-block;
     width: 510px;
+
+    /* 수직 정렬 */
+    vertical-align: top;
 }
 
-.notice li{border-bottom: 1px dotted red;}
 .gallery div {
     display: flex;
 }
+
 .gallery a {
     height: 170px;
     margin: 10px;
 }
+
 .gallery img {
     display: block;
     width: 180px;
@@ -190,12 +265,13 @@ footer {
     height: 100px;
     padding: 0 30px;
     background: #111;
-    color:#fff;
+    color: #fff;
 }
 
 footer a {
-    color:#fff;
+    color: #fff;
 }
+
 /* 1340px */
 .flogo {
     width: 200px;
