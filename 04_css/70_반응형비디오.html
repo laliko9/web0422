@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+          max-width: 100%;
+          height: auto;
+        }
+        </style>
+</head>
+<body>
+<video src="https://www.w3schools.com/css/mov_bbb.mp4"></video>
+    <!-- <ifarem></ifaream 외부 싸이트 모두 연결할때 씀  -->
+    <video src=""></video>
+    <!-- 비디오는 인라인 요소이다. 그래도 크기는 지정된다.  -->
+    <video width="400" controls>
+        <source src="https://www.w3schools.com/css/mov_bbb.mp4" type="video/mp4">
+        <source src="../assets/mov_bbb.mp4" type="video/webm">
+        <source src="mov_bbb.ogg" type="video/ogg">
+        <!-- 비디오/오디오 태그는 Ie8 이전 버번은 지원하지 않는다. -->
+        <!-- 사파리는 부분적 지원 : *.ogg -->
+        Your browser does not support HTML5 video.
+      </video>
+</body>
+</html>

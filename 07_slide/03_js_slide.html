@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 - 페이드 </title>
+    <style>
+        /* 초기화 */
+        body,ul {
+            margin:0;
+        }
+        ul { 
+            padding: 0; 
+            list-style: none; 
+        } 
+        img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            /* object- fit  높이 지정하고 쓸때 이미지가 찌그러지지않는다 .  */
+           vertical-align: top;
+        }
+
+        /* 슬라이드 */
+
+        #slide { 
+         
+            height: 350px;
+            
+            /* overflow: hidden;  */
+
+        } 
+        #slide ul { 
+            position: relative;
+            width: 100%;
+            /* top: 0 -> -100% -> -200% -> 0 */
+            top:0%;
+            height: 1050px; 
+            
+        } 
+        #slide li {
+            position: absolute;
+            width: 100%;
+    
+        }
+        #slide a {
+            display: block;
+            width: 100%;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            let idx = 0;
+            setInterval(autoSlide, 2000);
+
+              /*  객체.show([시간], [가속도], [콜백함수]) ~ 나타남
+                객체.hide([시간], [가속도], [콜백함수]) ~ 사라짐
+                객체.toggle([시간], [가속도], [콜백함수]) ~ 나타남/사라짐 번갈아 반복
+                객체.slideDown([시간], [가속도], [콜백함수]) ~ 위에서 아래로 서서히 나타남
+                객체.slideUp([시간], [가속도], [콜백함수]) ~ 아래서 위로 서서히 사라짐
+                객체.slideToggle([시간], [가속도], [콜백함수])
+                객체.fadeIn([시간], [가속도], [콜백함수]) ~ 서서히 나타남
+                객체.fadeOut([시간], [가속도], [콜백함수]) ~ 서서히 사라짐
+                객체.fadeToggle([시간], [가속도], [콜백함수])
+
+                객체.animate({속성: 값, ...}, [시간], [가속도], [콜백함수])
+                    시간은 생략하면 400
+                    가속도는 생략하면 swing
+                    콜백함수는 메소드 실행후 실행할 함수 기록!*/
+
+
+
+            function autoSlide(){
+                console.log("idx",idx);
+                // idx 0 ->1-> 2->0
+                // 삼항(조건)연산자
+                // 조건  ?   참: 거짓 
+                (idx === 2) ? idx = 0 : idx++;
+
+                // fade-in (나타내기)->opacity:1
+                //fade-out(사라지기)->opacity:
+                // 1in, 0out-> 2 in ,1out-> 0in,2out
+                $("#slide li").eq(idx).fadeIn ({opacity: 1},1000,function(){
+                    if(idx=== 0) idx =3;
+                    $("#slide li").eq(idx-1).fadeOut(1000);
+                    if(idx===3) idx = 0;
+//    animate 는 opacity 를 써줘야 한다. fadein/fadeout  은 opacity  기능을 가지고 있다. 사라졌다고 나타났다가하는 오퍼서티 
+// 1000은 1초 
+                
+        
+        });
+    }
+});
+    </script>
+</head>
+
+<body>
+    <div id="slide">
+        <ul>
+            <li><a href="#"><img src="../assets/KakaoTalk_20240816_114944934.jpg" alt="슬라이드 이미지1"></a></li>
+            <li><a href="#"><img src="../assets/배경그림들/KakaoTalk_20240703_141418063.jpg" alt="슬라이드 이미지2"></a></li>
+            <li><a href="#"><img src="../assets/KakaoTalk_20240816_114944934_02.jpg" alt="슬라이드 이미지3"></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

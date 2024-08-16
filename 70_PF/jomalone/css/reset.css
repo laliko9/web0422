@@ -1,0 +1,11 @@
+@charset "utf-8";
+* {box-sizing: border-box;}
+html {margin: 0;}
+h1,h2,h3,ul,p{margin: 0;
+}
+ul {padding:0;}
+button{border:0;}
+iframe{border:0;
+    width: 100px;
+    height: 100px;
+}

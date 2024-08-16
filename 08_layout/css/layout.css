@@ -7,3 +7,11 @@
 @import url(banner.css);
 @import url(tabs.css);
 @import url(footer.css);
+
+.main li {
+    position: relative;
+}
+
+.tabs {
+    height: 300px;
+}

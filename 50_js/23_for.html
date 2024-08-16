@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>제어문</h1>
+    <h2>반복문</h2>
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+        //본문에 li태그 사이에 이미지를 1장씩 넣어보세요.
+        // 요소 찾기
+        // HTML컬렉션 -> NodeList
+        const li = document.querySelectorAll("li");
+        console.log(li);
+        // HTML컬렉션[숫자]
+        // HTML컬렉션.item(숫자)
+
+        /* 
+            for의 형식
+            for(초기식;조건식;증감식) {
+                코드;
+            }
+        */
+
+        // 1, 2, ~ 10까지 출력하기
+        // i++는 i를 1씩을 증가시킨다.
+        // i--는 i를 1씩을 감소시킨다.
+        // for(let i = 0; i<10; i++) -> 0~9
+        // for(let i = 1; i<11; i++) -> 1~10
+        for (let i = 0; i < 10; i++) {
+            li[i].innerHTML = `<img src="../assets/pic_${i+1}.jpg" alt="이미지${i+1}">`;
+        }
+
+        for (let i = 1; i<=1000; i++) {
+            document.write(i+"<br>");
+        }
+
+
+
+        /*
+            li[0].innerHTML = '<img src="../assets/pic_1.jpg" alt="이미지1">';
+            li[1].innerHTML = '<img src="../assets/pic_2.jpg" alt="이미지2">';
+            li[2].innerHTML = '<img src="../assets/pic_3.jpg" alt="이미지3">';
+            li[3].innerHTML = '<img src="../assets/pic_4.jpg" alt="이미지4">';
+            li[4].innerHTML = '<img src="../assets/pic_5.jpg" alt="이미지5">';
+            li[5].innerHTML = '<img src="../assets/pic_6.jpg" alt="이미지6">';
+            li[6].innerHTML = '<img src="../assets/pic_7.jpg" alt="이미지7">';
+            li[7].innerHTML = '<img src="../assets/pic_8.jpg" alt="이미지8">';
+            li[8].innerHTML = '<img src="../assets/pic_9.jpg" alt="이미지9">';
+            li[9].innerHTML = '<img src="../assets/pic_10.jpg" alt="이미지10">'; 
+        */
+
+    </script>
+</body>
+
+</html>

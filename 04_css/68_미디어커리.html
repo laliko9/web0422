@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 데스크탑 우선 디자인 : 큰 장치 -> 작은 장치 */
+
+        /* 데스크탑 */
+
+        @media (max-width:992px) {
+            /* 992 이하: 태블릿 */
+            body {background: darkcyan;}
+        }
+
+        /* 참고 : 자바스크립트의 and 는 논리적 연산자 && */
+        @media (max-width:576px) {
+            /* 576 이하: 폰 */
+            body {background: lightgoldenrodyellow;}
+        }
+        @media (max-width:576px)and (orientation: landscape) {
+            /* 768 이하 이고 가로 방향 :폰  */
+            body {background: darkred;}
+        }
+          
+
+    </style>
+</head>
+<body>
+
+</body>
+</html>

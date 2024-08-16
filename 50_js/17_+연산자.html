@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>연산자</h1>
+    <h2>산술 연산자</h2>
+    <script>
+        const a = 5, b = 2, c = "오";
+
+        // write()는 HTML 태그 인식한다.
+        document.write("문자열<br>");
+        // +는 더하기
+        // 숫자 + 숫자 -> 숫자
+        // a + " + " + b + " = "
+        // "5 + 2 ="
+        // 변수 + "문자열" + 변수 + '문자열'
+        document.write(a + " + " + b + " = " + (a + b) + "<br>");
+        // +는 연결
+        // 문자 + 숫자 -> 문자
+        // 문자 + 문자 -> 문자
+        document.write("+연산자 사용한 방법: " + c + " + " + b + " = " + c + b + "<br>");
+
+        /*
+            백틱(backticks) 구문
+            1. `백틱` 안에 내용은 모두 문자열로 취급한다.
+            2. HTML 태그 인식한다.
+            3. 문자열 보간: ${표현식}
+        */
+        document.write(`백틱을 사용한 방법: ${c} + ${b} = ${c + b}<br>`);
+
+        // NaN(Not a Number): 숫자가 아니다.
+        document.write(`${a} - ${b} = ${a - b} <br>`);
+        document.write(`${a} * ${b} = ${a * b} <br>`);
+        document.write(`${a} / ${b} = ${a / b} <br>`);
+        // %는 나머지
+        document.write(`${a} % ${b} = ${a % b}`);
+    </script>
+</body>
+</html>

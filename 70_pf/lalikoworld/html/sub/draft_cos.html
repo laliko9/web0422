@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cos </title>
+    <style>
+
+/* reset */
+        body {margin: 0;}
+        img {width: 100%; height: auto; vertical-align: top;}
+
+        /* 폰 */
+        img:first-of-type, img:nth-of-type(2){display: none;}
+
+      
+
+        @media(min-width: 768px){
+            /* 테블릿 */
+            img:last-of-type {display:none;}
+            img:nth-of-type(2) {display:block;}
+        }
+        @media(min-width: 998px){
+            /* 데스크탑 */
+
+            img:nth-of-type(2) {display:none;}
+            img:first-of-type {display:block;}
+           
+
+        }
+
+    </style>
+</head>
+<body>
+    <img src="../../assets/desktop.png" alt="데스크탑"usemap="#image-map-desktop">
+    <img src="../../assets/tablet.png" alt="테블릿">
+    <img src="../../assets/phone.png" alt="폰">
+</body>
+</html>

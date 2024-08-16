@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        p {
+            font-size: 50px;
+        }
+
+        p.hidden{
+            display: none;
+        }
+
+        #tabs>div {
+            font-size: 50px;
+            display:none;
+        }
+
+        #tabs>div.on {
+            display:block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>탭</h1>
+     <p>나는 단락이다.</p>
+
+    <div id="tabs">
+
+        <ul>
+            <li><a href="#tab1">공지사항</a></li>
+            <li><a href="#tab2">갤러리</a></li>
+        </ul>
+
+        <div class="on" id="tab1">첫 번째 콘텐츠</div>
+        <div id="tab2">두 번째 콘텐츠</div>
+
+    </div>
+
+    
+    <script>
+
+        /* 문제1. 버튼1을 클릭하면 p를 숨기고 버튼2를 클릭하면 p를 나타나게 하시오 (단, classList 사용) */
+
+        //1. 요소 찾기
+        const p = document.querySelector('p');
+        const btn1 = document.querySelectorAll('a')[0];
+        const btn2 = document.querySelectorAll('a')[1];
+
+
+        btn1.onclick = function(){
+           p.classList.add('hidden');
+        }
+
+        btn2.onclick = function(){
+           p.classList.remove('hidden');
+        }
+        // ================================================================
+
+        /* 문제2. 버튼1을 클릭하면 첫 번째 콘텐츠가 보이고. 두 번째 콘텐츠는 숨기고 버튼2를 클릭하면 두 번째 콘텐츠는 보이고, 첫 번째 콘텐츠는 숨기시오 (단, classList 사용) */
+
+
+          //1. 요소 찾기
+        const btn1 = document.querySelectorAll('#tabs a').item(0);
+        const btn2 = document.querySelectorAll('#tabs a').item(1);
+        const cont1 = document.querySelectorAll('#tabs>div')[0];
+        const cont2 = document.querySelectorAll('#tabs>div')[1];
+
+        //확인방법
+        // console.log(btn1);
+        // console.log(btn2);
+        // console.log(cont1);
+        // console.log(cont2);
+
+        
+        // btn1.onclick = function(){
+        //     cont1.classList.add('on');
+        //     cont2.classList.remove('on');
+        // };
+
+        // btn2.onclick = function(){
+        //     cont2.classList.add('on');
+        //     cont1.classList.remove('on');
+        // };
+
+
+    </script>
+    </body>
+</html>

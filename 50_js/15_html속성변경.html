@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+        div {
+            margin: 20px 20px 20px 0;
+        }
+        a{
+            text-decoration: none;
+            color:#333;
+            border:1px solid lightpink;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition:.5s;
+        }
+
+        a:hover {
+            box-shadow: 0 0 5px 2px pink;
+            /* box-shadow : x위치 y위치 흐림 퍼짐 색; */
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML 속성 변경하기 / 가져오기</h1>
+
+    <div>
+        <a href="#" id="prev">이전(previous)버튼</a>
+        <a href="#" id="next">다음(next)버튼</a>
+    </div>
+
+    <img src="./../assets/말티즈.jpeg" alt="말티즈">
+    
+    <script>
+        // 요소찾기
+        const img = document.querySelector("img");
+        const pBtn = document.querySelectorAll("a")[0];
+        const nBtn = document.querySelectorAll("a")[1];
+        console.log(nBtn);
+
+        //HTML 속성 가져와서 tit변수에 넣기
+        const tit = img.alt;
+        console.log(tit);
+
+        //이미지의 alt속성을 가져와서 title속성으로 변경하기
+        img.title = tit;
+
+        // 이벤트 처리
+        pBtn.onclick = function(){
+            img.src = "./../assets/비숑.jpg";
+            img.alt = "비숑";
+        };
+
+        nBtn.onclick = function(){
+            img.setAttribute("src","./../assets/말티즈.jpeg");
+            img.setAttribute("alt","말티즈");
+        //     img.src = "./../assets/말티즈.jpeg";
+        //     img.alt = "말티즈";
+        // 
+        };
+
+
+        // HTML 속성 변경하기 방법 2가지
+        
+        //방법1
+        // img.src = "./../assets/비숑.jpg";
+        // img.alt = "비숑";
+        
+        //방법2
+        // img.setAttribute("src","./../assets/비숑.jpg");
+        // img.setAttribute("alt","비숑");
+
+        
+
+    </script>
+</body>
+</html>
