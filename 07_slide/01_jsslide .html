@@ -52,11 +52,13 @@
         // 준비이벤트
         $(function(){
             // 요소찾기
-            const slidelist =$("# slide ul");
+            const slide =$("# slide ul");
+            const slidelist = slide.$ ("ul");
             // 객체,css(속성, 값,...})
             // 객체, animate({속성: 값, 속성: 값, ....},시간 ,가속도  )
             // 여기서 값은 "문자열",숫자
-            slidelist.animate({left: "-100%"},1000)
+            // https://api.jqueryui.com/easings/->32가지 easing종류!
+            slidelist.animate({left: "-100%"},1000, "linear")
 // 자바 스크립트 1000 단위의 시간이여야 움직인다. 
 
 
