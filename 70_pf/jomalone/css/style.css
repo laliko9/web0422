@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import url('reset.css');
+@import url('typo.css');
+
+html{
+    scroll-behavior: smooth;
+}
+/* 해더영역 */
+header {
+    position: fixed;
+    z-index: 9999;
+    display:flex;
+    
+}
+/* 슬라이드 내용 */
+
+/* :html {
+    --w: 500px;
+    --h: 150px; 
+} */
+
+.slide {
+  
+    width: 1920px;
+    height: 500px;
+    margin: 0px;
+    overflow: hidden;
+    /* 3장의 이미지가 하나만 보이게함  */
+}
+.slide ul {
+    position: relative;
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 12s infinite;
+}
+.slide li {
+    flex: 0 0 25%;
+}
+
+/* animation */
+
+   
+
+@keyframes slide {
+    0% {left: 0%;}
+    10% {left: -100%;}
+    33% {left: -100%;}
+    43% {left: -200%;}
+    66% {left: -200%;}
+    76% {left: -300%;}
+    99.99% {left: -300%;}
+    100% {left: 0%;}
+}
+/* 세션1 */
+/* 세션2 */
+/* 세션3 */
+/* 세션4 */

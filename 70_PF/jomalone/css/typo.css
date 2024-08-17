@@ -24,7 +24,8 @@ input, button {
 button {
     color: #fff;
 }
-
+ /* typo */
+ .slide li {font-size: calc(var(--w) / 5); text-align: center; line-height: calc(var(--h) - 20px);}
 /* 해더 */
 /* 세션1 */
 /* 세션2*/
