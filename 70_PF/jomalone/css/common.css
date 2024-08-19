@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2');
+}
+
+html {
+    font-size: 10px;
+}
+
+/* html 10px 지정하면  rem 사용 가능 */
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "NanumSquareNeo", sans-serif;
+}
+
+h1,
+h3 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+/* 색은 상속받지 않는다. */
+a {
+    color: #111;
+}
+
+::placeholder {
+    font-size: 1.5rem;
+    color: #aaa;
+}
+
+input,
+button {
+    font: 1.5rem 'Noto Sans KR', sans-serif;
+}
+
+button {
+    color: #fff;
+}
+
+/* 해더 */
+/* 세션1 */
+#sec1 h2 {
+letter-spacing: 4px;
+    font-weight: 400;
+}
+#sec1 b {
+
+    color: #fff;
+}
+
+
+/* 세션2*/
+#sec2 h3 {
+
+    color: #fff;  
+}
+/* 세션3*/
+#sec3 h3 {
+    font-size: 2.4rem;
+}
+/* 세션4*/
+/* 푸터 */
+footer {
+    color: #fff;  
+}
