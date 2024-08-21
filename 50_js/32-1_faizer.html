@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: top;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 슬라이드  */
+        #slideWrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;}
+          
+
+        #slideWrap .slideImg {
+            display: flex;
+            position: relative;
+            left: 0%;
+        }
+
+     
+
+        /* indicator 인디케이터 (페이지) */
+        #slideWrap .indicator {
+            position: absolute;
+            /* 가로 중앙배치 */
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 30px;
+        }
+
+        #slideWrap .indicator a {
+            display: inline-block;
+            /* 1.2.3 숨기기 */
+            text-indent: -9999em;
+            /* vw 브라우저 보여지는 영역  뷰포트 줄임 vw  */
+            /* width .7 ->100분의 7이라는 의미 .쩜의미  */
+            width: .7vw;
+            height: .7vw;
+            border-radius: 50%;
+            margin: 0 8px;
+            background: #fff;
+        }
+
+        /* a태그 중에서 .active 클래스를 가질 경우  */
+        #slideWrap .indicator a.active {
+            background: #f00;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            // 요소 찾기
+            const slide = document.querySelector("#slideWrap");
+            const slideList = slide.querySelector("ul");
+            const slideListItem = slideList.querySelectorAll("li");
+            const slideListItemImg = slideList.querySelectorAll("img");
+            const indicator = slide.querySelectorAll(".indicator a");
+
+            // 요소 순번
+            let idx = 0;
+
+            // 슬라이드 전환 시간
+            const speed = 2000;
+
+         
+
+            // 슬라이드 개수
+            const slideCount = slideListItemImg.length + 1;
+            console.log(slideCount);
+
+            // 슬라이드 크기
+            const slideWidth = 50;
+            const slideHeight = 50;
+
+            slideSize();
+
+            function slideSize() {
+
+                // 슬라이드 크기
+                slide.style.width = slideWidth + "%";
+                slide.style.height = slideHeight + "%";
+                slideList.style.width = 100 * slideCount + "%";
+                slideList.style.height = 100 + "%";
+                for (x of slideListItem) {
+                    x.style.width = 100 + "%";
+                }
+            }
+
+            // ul의 첫 번째 요소 ul끝에 복제 (반드시 크기를 지정하고 복제해야 한다!)
+            slideList.appendChild(slideList.firstElementChild.cloneNode(true));
+
+           
+
+           
+
+            
+            // next slide function
+            function nextSlide(idx) {
+                // idx 0,1,2
+                console.log ("다음",idx);
+                slideList.style.left = -100 * idx + "%";
+                slideList.style.transition = "1s";
+                
+                if (idx === slideCount - 1) {
+                    setTimeout(() => {
+                        idx = 0;
+                        slideList.style.left = -100 * idx + "%";
+                        slideList.style.transition = "0s";
+                    }, 1000);
+                }
+
+                console.log("다음", idx);
+                if (idx === 3) idx = 0;
+                indiActive(idx);
+
+            }
+
+            // indicator
+            indicator.forEach((indi, idx) => {
+                indi.onclick = () => {
+                    nextSlide(idx)
+// 
+                    console.log("인디케이터", idx);
+                };
+            });
+
+            // indicator active color function
+            function indiActive(num) {
+                // 모든 a 태그의 .active 클래스 제거
+                for (x of indicator) {
+                    x.classList.remove("active");
+                }
+                 // 모든 a 태그만 .active 클래스 추가
+                indicator[num].classList.add("active");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div id="slideWrap">
+        <ul class="slideImg">
+            <li><img src="../assets/KakaoTalk_20240816_114944934.jpg" alt="이미지1"></li>
+            <li><img src="../assets/KakaoTalk_20240816_114944934_01.jpg" alt="이미지2"></li>
+            <li><img src="../assets/KakaoTalk_20240816_114944934_02.jpg" alt="이미지3"></li>
+        </ul>
+       
+        <div class="indicator">
+            <a href="#" class="active">1</a>
+            <!-- active 인것만 똥그라마 빨강색  2번째하려면 밑에 액티브 쓴다  -->
+            <a href="#">2</a>
+            <a href="#">3</a>
+        </div>
+    </div>
+</body>
+</html>

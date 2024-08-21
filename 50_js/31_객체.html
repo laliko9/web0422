@@ -21,6 +21,7 @@
         */
 
         // 객체 리터럴로 객체 생성하면서 속성 추가
+        // 글로벌 하려면  const en =..... const kr 
         const car = {
             type: "Fiat",
             model: "500",
@@ -28,18 +29,26 @@
         };
 
         // 객체 리터럴로 객체 생성하면서 속성 할당
+
+        /*
+        속성의 값이 함수 이면 이때 속성은 메소드라 부른다.
+        const객체명 ={
+        속성가
+        
+        }
+        
+        */
         const person1 = {
             "firstName": "John",
             lastName: "Doe",
             age: 50
         };
 
-        // 객체 접근 방법
-        person1.firstName;
-        person1["firstName"];
-        person1.lastName;
-        person1["lastName"];
-
+        // 객체 접근console.log(person1.firstName);.firstName;
+        console.log(person1.firstName);
+        console.log(person1.[firstName];
+        console.log(person1.firstName);     
+        console.log(person1.[firstName];
         const person2 = {
             firstName: "John",
             lastName: "Doe",
