@@ -109,11 +109,16 @@
                 /* 
                     for(const 변수 of HTML컬렉션)
                 */
-               // slideListItem 즉, li 개수 만큼 반복
+               // slideListItem 즉, li 개수 만큼 반복.x는 li  하나하나를 나타낸다 
                 for (const x of slideListItem) {
                     x.style.width = 100 + "%";
                 }
+            
             }
+            // sildeListItem  마지막 끝 
+            
+
+
 
             // ul의 첫 번째 요소 ul끝에 복제 (반드시 크기를 지정하고 복제해야 한다!)
             /* 
@@ -136,7 +141,12 @@
             // 첫 번째 li 요소를 복제하여 ul 끝에 추가
             // slideList.appendChild(slideListItem[0].cloneNode(true));
             slideList.appendChild(slideList.firstElementChild.cloneNode(true));
+/*          포토샵 x
+             피그마 x
+             hTML+CSS x
 
+            HTML+CSS+JS->개발자 영역: recat 는 js다 
+*/
 
             // 2초 마다 자동 슬라이드 함수 호출
             setInterval(autoSlide, speed);
@@ -144,6 +154,7 @@
             // 자동 슬라이드 함수 선언
             function autoSlide() {
                 idx++;
+                console.log("id?",idx);
                 slideList.style.left = -100 * idx + "%";
                 slideList.style.transition = speed/2000 + "s";
 

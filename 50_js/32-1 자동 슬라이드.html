@@ -58,7 +58,7 @@
             // 요소 순번
             let idx = 0;
 
-            // 슬라이드 전환 시간
+            // 슬라이드 전환 .슬라이드 속도 
             const speed = 2000;
 
             // 슬라이드 개수
@@ -67,7 +67,7 @@
             console.log("슬라이드 개수는?", slideCount);
 
             // 슬라이드 크기
-            const slideWidth = 30;
+            const slideWidth = 50;
             const slideHeight = 30;
 
             // 슬라이드 크기 함수 호출
@@ -109,7 +109,14 @@
                 /* 
                     for(const 변수 of HTML컬렉션)
                 */
-               // slideListItem 즉, li 개수 만큼 반복
+               // slideListItem 즉, li 개수 만큼 
+               
+
+            /*   제어문>반복문>for, for of (걸렉션, 배열), for in (객체)
+                메소드; forEach()
+            
+            
+            */
                 for (const x of slideListItem) {
                     x.style.width = 100 + "%";
                 }
@@ -144,13 +151,21 @@
             // 자동 슬라이드 함수 선언
             function autoSlide() {
                 idx++;
+                console.log("id?",idx);
+
                 slideList.style.left = -100 * idx + "%";
                 slideList.style.transition = speed/2000 + "s";
 
                 if (idx === slideCount) {
+                    // 0% 처음 위치로 이동 ->이때는 전환 (transition) 시간은 0으로  하여  이동하는  인식하지 못하게 한다.
                     idx = 0;
                     slideList.style.left = "0%";
                     slideList.style.transition = "0s";
+                    // 순간이동하기때문에  transition 의 시간을 주지 않는다.0s  제로이다.
+
+
+                    // 0% 위치 이동 후 즉시 왼쪽으로 이동 (-100%위치) /idx  위치 이동하는 것을  임의로 표시한것
+                    // 변수를 쓰면 이동해버린다. 고정이 안된다 
                     setTimeout(() => {
                         idx = 1;
                         slideList.style.left = -100 * idx + "%";
