@@ -5,13 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daewoo</title>
     <script >
-        // 데이터 객체 
-        /* 형식 :   const 객체 = {
-                        속성:값,
-                        속성:값,
-                        속성:[값,값,값]
+       
+
+        
+        /* 
+        
+        객체 생성 
+        
+        형식 :   const 객체 = 속성1:{
+                        속성2:값,
+                        속성3:값,
+                        속성4:[값,값,값,......],
                         ...
-        },
+        }
+    };
+
+
+        객체 접근
+            객체 .속성
+            객체["속성1"]
+            객체.속성1.속성3
+            객체["속성1"]["속성4"]
+
+
+
+            // [" "]  대가로를 쓰려면 더블 커테이션 써야 한다. 만약 대가로를 쓰고 싶지 않으면 . 쩜을 써야한다 
+            속성에는 더블 커테이션 없애도 된다 하지만 속성은 안된다 .
           */ 
         const main_data = {
 
@@ -61,15 +80,22 @@ window.addEventListener("DOMContentLoaded", ()=>{
  ONCHANGE-> select 태그에서 option이 바뀔 때 
  */
 
+//  select의 값이 바뀔때 
     sel.onchange = (e) => {
-        let opt = e.currentTarget.value;
-        let data = ml[opt];
+        // value 속성은 select의 option 값을 가져온다.
+        // event.currentTarget은 현재 선택된 option을 가리킨다.
+        let opt = event.currentTarget.value;
+        consol.log("opt?",opt);
+        let data = main_data[opt];
 
         //로고 변경
+        // 객체.setAttribute("HTML속성", "값")->HTML의 속성 ㄱ밧 
         logo.setAttribute("src",`${data["logo"]}`);
-        console.log(data["logo"]);
+        // console.log(data["logo"]);
 
         // 메인 타이틀 변경
+        // idx 는 순번이다  1.2.3.4.  foeach 사용을 idx사용을 위해서 / 그리고  for of .. 안쓴이유
+        
         tit.forEach((ele,idx)=>
             ele.innerText = data["tit"][idx]);
 
