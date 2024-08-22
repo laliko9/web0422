@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: relative;
+            /* 포지션을 써야지만 left .top . right. bottom  적용 가능  */
+            left: 0px;
+            top: 0px;
+            width: 300px; 
+            height: 300px;
+             background: yellow;
+              margin-left: 30px;
+               margin-top: 30px;
+               /* offsetleft 또는 offsetTop이 적용 되지 않는다. */
+             transform: translateX(100px);
+             transform: translateY(100px);
+           
+             /* 똑같은 속성쓰면 아래것만 적용됨   translate y만 적용  */
+            }
+        move.move {
+            left:200px;
+            top: 200px;
+            button{  margin-left: 30px;
+                     margin-top: 30px;
+           
+            }
+        }
+    </style>
+    <script>
+
+        window.addEventListener("DOMContentLoaded" , ()=>{
+   // 객체.offsetTop -> 부모로 부터 객체의 위치 픽셀 값을 가져온다.
+//    (읽기 전용 )
+
+            const div = document.querySelector("div");
+        
+
+            //  다큐멘터리에 있는 제이커리 query 줄임 qs  "div" 있다는 뜻
+            console.log("top:" ,div.offsetTop)
+            console.log("left:" + div.offsetTop)
+
+        });
+     
+    </script>
+</head>
+<body>
+  
+  <div>박스</div>  
+</body>
+</html>
