@@ -31,7 +31,7 @@ header {
     /* box-shadow: x위치 y위치 흐림 퍼짐 색; 
     */
     background: #fff;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);}
 
     /* 섹션1 */
 #sec1 {
@@ -59,7 +59,7 @@ header {
 
 
 
-}
+
 nav ul {
     display: flex;
 }
