@@ -18,6 +18,51 @@ header {
     background:#fff;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);}
 
+    :html {
+        --w: 500px;
+        --h: 150px; 
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+      padding-left:0;
+      list-style: none;
+    }
+    .slide {
+      
+        width: 500px;
+        height: 150px;
+        margin: 20px;
+        overflow: hidden;
+        /* 3장의 이미지가 하나만 보이게함  */
+    }
+    .slide ul {
+        position: relative;
+        display: flex;
+        width: 400%;
+        height: 100%;
+        animation: slide 12s infinite;
+    }
+    .slide li {
+        flex: 0 0 25%;
+    }
+
+    /* animation */
+    
+       
+    
+    @keyframes slide {
+        0% {left: 0%;}
+        10% {left: -100%;}
+        33% {left: -100%;}
+        43% {left: -200%;}
+        66% {left: -200%;}
+        76% {left: -300%;}
+        99.99% {left: -300%;}
+        100% {left: 0%;}
+    }
+
     /* 세션1 */
     #sec1{
         position: relative;
@@ -51,7 +96,47 @@ section {
     padding-top: 96px;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
 /* 스크린 사진의 싸이즈 조정  */
 #sec1 div {
-    height: 1000px;
+    height: 1920px;
+   
+}
+/* 세션 2.3. 공통  */
+section li {
+    width: 1920px;
+}
+/* section li:not(:nth-of-type(4n)) {
+    margin-right: 20px;
+} */
+
+/* 세션2 */
+#sec2 h2{
+    border-bottom: 1px solid #ccc;
+    /* border-bottom 기준 라인에서 밑으로 23px 떨어지는 의미 */
+    padding-bottom:24px;
+    margin-bottom: 48px;
+}
+#sec2 ul{
+    display: flex;
+    /* 줄바꿈을 위해 플랙스 wrap 올 해줘야 줄바꿈이 가능하다 */
+    flex-wrap: wrap;
+}
+
+#sec2 li{
+    height: 600px;
+    margin-bottom: 100px;
+}
+#sec2 h3 {
+    position: absolute;
+    background: yellow;
+    padding: 8px 24px;
+}
+#sec2 div{
+    height: 100%;
 }
