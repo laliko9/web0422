@@ -109,11 +109,11 @@ img {
 }
 /* 세션 2.3. 공통  */
 section li {
-    width: 1920px;
+    width: 355px;
 }
-/* section li:not(:nth-of-type(4n)) {
+section li:not(:nth-of-type(4n)) {
     margin-right: 20px;
-} */
+}
 
 /* 세션2 */
 #sec2 h2{
