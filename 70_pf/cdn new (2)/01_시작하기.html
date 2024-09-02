@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_CDN 방식으로 리액트 시작하기</title>
+    <link rel="stylesheet" href="./src/01_시작하기.css">
+
+    <!-- 리액트 인터랙티브 UI 만들다. -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+
+    <!-- 리액트 가상 DOM 요소를 가져다가 HTML DOM에 넣을 수 있도록 한다. -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+
+    <!-- JSX 코드를 브라우저가 이해할 수 있는 형태로 변환한다. -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- type="text/babel" -> JSX코드 인식 -->
+    <!-- 확장자는 .jsx 또는 .js -->
+    <script src="./src/01_시작하기.jsx" type="text/babel"></script>
+</head>
+
+<body>
+    <!-- 리액트의 표준 관례로 보통 #root를 사용한다. -->
+    <div id="root"></div>
+</body>
+
+</html>
