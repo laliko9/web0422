@@ -15,7 +15,7 @@ function Card(props){
             </div>
             <div className="card_btn">
                 <button>{props.mheart}</button>
-                <a href="#">예매</a>
+                <a href="#">장바구니가기</a>
             </div>
         </li>
     );
