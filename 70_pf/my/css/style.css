@@ -11,9 +11,38 @@ body {
 }
 h2, h3 {
     font-weight: 300;
+    text-align: center;
 }
+h4 { letter-spacing: 10px;}
 img, video {
     width: 100%;
     max-width: 100%;
+    object-fit: cover;
     height: auto;
+}
+
+/* common  */
+
+/* progress */
+.progress {
+    height: 30px;
+    font-size: 1.5rem;
+}
+
+.progress:nth-of-type(1).progress-bar {width: 90%;}
+.progress:nth-of-type(2).progress-bar {width: 60%;}
+.progress:nth-of-type(3).progress-bar {width: 80%;}
+.progress:nth-of-type(4).progress-bar {width: 70%;}
+
+/* counter */
+
+.counter span {
+    display: block;
+    font-size: 2.4rem;
+
+}
+
+/* footer */
+footer{
+    height: 300px;
 }
