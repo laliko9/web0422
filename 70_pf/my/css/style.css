@@ -38,9 +38,6 @@ video {
     object-fit: cover;
     height: auto;
 }
-input {
-    border: none;
-}
 iframe {
     width: 100%;
     border: none;
@@ -90,6 +87,8 @@ iframe {
 #s4 .container-fluid {
     height: 400px;
     background-image: url(../assets/parallax3.jpg);
+    input {
+        border: none;}
 }
 
 /* background-image Title */
@@ -119,6 +118,9 @@ iframe {
 }
 
 /* counter */
+.counter.col-sm {
+    padding: 24px 0;
+}
 .counter {
     display: block;
     background: #616161;
@@ -132,28 +134,38 @@ iframe {
 }
 
 /* section3: portfolio */
+#s3 .col-sm{
+    margin-bottom: 8px;
+}
 
 #s3 {
     text-align: center;
 }
-#s3 .col {
+/* #s3 .col {
     padding: 8px;
-}
+} */
+/* section4.contact */
+  
+        #s4 input {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 4px 0;
+        }
+        
+        
 
-@media (min-width: 992px) {
-    /* section4: contact */
-    #s4 li {
-        line-height: 2;
-    }
+    
+    #s4 ul {margin-top: 16px;}
     #s4 .row p {
         margin: 24px 0 8px;
     }
-
-    #s4 input {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin: 4px 0;
+    #s4 li {
+        line-height: 2;
     }
+
+@media (min-width: 992px) {
+    /* section4: contact */
+
     #s4 button.btn {
         margin-top: 16px;
     }
@@ -169,16 +181,15 @@ iframe {
 }
 
 /* footer */
-footer {
-    padding: 60px 0;
-    background: #000;
-    text-align: center;
-    color: #fff;
-}
+
 footer a {
     color: #fff;
 }
 footer .sns {
     margin: 16px 0;
     font-size: 2.4rem;
+}
+
+footer {
+    padding: 60px ;
 }
