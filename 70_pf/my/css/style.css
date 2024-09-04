@@ -165,7 +165,10 @@ iframe {
 
 @media (min-width: 992px) {
     /* section4: contact */
-
+#form div {
+    display: flex;
+    justify-content: space-between;
+}
     #s4 button.btn {
         margin-top: 16px;
     }
